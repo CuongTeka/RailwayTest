@@ -1,0 +1,60 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.KhachHang
+
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("DangKy", "TrangChu", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+                <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang Chủ</a></li>
+                <li class="active">Đăng Ký</li>
+            </ol>
+        </div>
+    </div>
+    <div class="login-page">
+        <div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+            <h3 class="title">Đăng Ký<span> Tài Khoản</span></h3>
+        </div>
+        <div class="widget-shadow">
+            <div class="login-top wow fadeInUp animated" data-wow-delay=".7s">
+                <h4>Bạn đã có tài khoản ?@Html.ActionLink("Đăng nhập", "DangNhap", "TrangChu", null, new { @class = "active" }) </h4>
+            </div>
+            <div class="login-body">
+                @using (Html.BeginForm())
+                {
+                    <a>Họ tên khách hàng</a>
+                    @Html.TextBoxFor(model => model.TenKH, new { @class = "form-control", placeholder = "Họ tên" })
+                    <a>Địa chỉ email</a><span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control email", placeholder = "Email", required = "Vui lòng đúng đinh", type = "email",
+                   pattern = @"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+               })
+                    <a>Số điện thoại</a><span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.SoDienThoaiKH, new { @class = "form-control", placeholder = "Số điện thoại", required = "required", type = "tel", pattern = "[0-9]{10}" })
+                    <a>Tên tài khoản  </a><span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.TenTKKH, new { @class = "form-control", placeholder = "Tên tài khoản", required = "required" })
+                    <a>Mật khẩu</a><span style="color:red">*</span>
+                    @Html.PasswordFor(model => model.MKTKKH, new { @class = "form-control lock", placeholder = "Mật khẩu", required = "required", minlength = "8" })
+                    <a>Nhập lại mật khẩu  </a><span style="color:red">*</span>
+                    <input type="password" name="RePassword" class="lock" placeholder="Nhập lại mật khẩu" required="">
+                    <div class="col-md-4" style="color:orangered">
+                        @Html.ValidationSummary()
+                    </div>
+                    <input type="submit" name="Register" value="Đăng Ký" class="btn btn-primary">
+                }
+
+            </div>
+        </div>
+    </div>
+    <script src="~/Assets/User/js/main.js"></script>
+    <script src="~/Assets/User/js/bootstrap.js"></script>
+}
+
+
+
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6e2c6553ec76405d894de1362430bc88" Name="Diagram1">
+        <EntityTypeShape EntityType="ThietBiDienTuModel.BaoHanh" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.CTDDH" Width="1.5" PointX="10.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.CTDiaChi" Width="1.5" PointX="7.5" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.CTGioHang" Width="1.5" PointX="7.5" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.DanhGiaSanPham" Width="1.5" PointX="8.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.DanhMuc" Width="1.5" PointX="6" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.DDH" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.DiaChi" Width="1.5" PointX="5.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.GioHang" Width="1.5" PointX="5.25" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.HangSanXuat" Width="1.5" PointX="6" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.HinhAnh" Width="1.5" PointX="6" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.HoanHang" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.HuyHang" Width="1.5" PointX="13.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.KhachHang" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.MaGiamGia" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.MaGiamGia_KhachHang" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.NhanVien" Width="1.5" PointX="3" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.NhaVanChuyen" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.Quyen" Width="1.5" PointX="0.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.SanPham" Width="1.5" PointX="8.25" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThietBiDienTuModel.YeuCauBH" Width="1.5" PointX="10.5" PointY="16.125" IsExpanded="true" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_BaoHanh_DDH1" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_BaoHanh_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_BaoHanh_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_YeuCauBH_BaoHanh" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_CTDDH_DDH1" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_CTDDH_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_CTDiaChi_DiaChi" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_CTGioHang_GioHang" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_CTGioHang_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_DanhGiaSanPham_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_DanhGiaSanPham_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_SanPham_DanhMuc" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_DDH_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_DDH_MaGiamGia1" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_DDH_NhaVanChuyen1" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_HoanHang_DDH1" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_HuyHang_DDH1" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_DiaChi_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_GioHang_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_SanPham_HangSanXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_SanPham_HinhAnh" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_HoanHang_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_HuyHang_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK__MaGiamGia___MaKH__662B2B3B" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_KhachHang_Quyen" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_YeuCauBH_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK__MaGiamGia__MaGia__65370702" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_Admin_Quyen" ManuallyRouted="false" />
+        <AssociationConnector Association="ThietBiDienTuModel.FK_YeuCauBH_SanPham" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

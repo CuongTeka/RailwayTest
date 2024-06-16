@@ -1,0 +1,171 @@
+﻿
+@model PagedList.IPagedList<ThietBiDienTu.Areas.Admin.Models.SanPham>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<html>
+<body>
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- ASIDE -->
+                @Html.Action("DanhMuc", "SanPham")
+                <!-- /ASIDE -->
+                <!-- STORE -->
+                <div id="store" class="col-md-9">
+                    <!-- store top filter -->
+                    <div class="store-filter clearfix">
+                        <div class="store-sort" @ViewBag.SortBy>
+                            <label>
+                                Sắp xếp giá:
+                                <select class="input-select">
+                                    <option @(ViewBag.CurrentSort == ViewBag.PriceDescSort ? "selected" : "") value="@ViewBag.PriceDescSort"> Cao - Thấp</option>
+                                    <option @(ViewBag.CurrentSort == ViewBag.PriceAscSort ? "selected" : "") value="@ViewBag.PriceAscSort"> Thấp - Cao</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Số lượng:
+                                <select class="input-select">
+                                    <option value="0">20</option>
+                                    <option value="1">50</option>
+                                </select>
+                            </label>
+                        </div>
+                        <ul class="store-grid">
+                            <li class="active"><i class="fa fa-th"></i></li>
+                            <li><a href="#"><i class="fa fa-th-list"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /store top filter -->
+
+                    <div class="row">
+                        <!-- store products -->
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-4 col-xs-6 mb-5">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.HinhAnh.LinkHinhAnhChinh)" alt="">
+                                        <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-body">
+                                        <p class="product-category">@Html.DisplayFor(modelItem => item.DanhMuc.TenDanhMuc)</p>
+                                        <h3 class="product-name"><a href="@Url.Action("ChiTietSanPham", "SanPham", new { id = item.MaSP })">@Html.DisplayFor(modelItem => item.TenSP)</a></h3>
+                                        <h4 class="product-price">@String.Format("{0:0,0}", item.GiaTien) đ <del class="product-old-price">@String.Format("{0:0,0}", item.GiaTien) đ</del></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        @*<div class="product-btns">
+                                                <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Yêu thích</span></button>
+                                                <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">So sánh</span></button>
+                                                <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">@Html.ActionLink("Xem nhanh", "ChiTietSanPham", new { id = item.MaSP })</span></button>
+                                            </div>*@
+                                        <div class="add-to-cart">
+                                            <button class="add-to-cart-btn"
+                                                    onclick="AddToCart(@Html.DisplayFor(modelItem => item.MaSP))">
+                                                <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                    <script>
+                                        function AddToCart(productId) {
+                                            $.ajax({
+                                                url: "/SanPham/ThemSPVaoGio",
+                                                method: "POST",
+                                                data: { productId: productId }
+                                            })
+                                                .done(function (msg) {
+                                                    alert("Thêm thành công");
+                                                    location.reload();
+                                                });
+                                        }
+                                    </script>
+
+
+                                </div>
+                            </div>
+                        }
+
+                        <!-- /product -->
+                    </div>
+                    <!-- /store products -->
+                    <!-- store bottom filter -->
+                    <div class="store-filter clearfix">
+                        <span class="store-qty">Hiển thị  12-100 sản phẩm</span>
+
+                        <ul @*class="store-pagination"*@>
+                            @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                            @Html.PagedListPager(Model, page => Url.Action("SanPham", new { page=page, @timkiem=ViewBag.tukhoa }))
+                            @*<li class="active">1</li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>*@
+                        </ul>
+                    </div>
+                    <!-- /store bottom filter -->
+                </div>
+                <!-- /STORE -->
+
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+
+
+</body>
+</html>
+
+<!--TrangChu-->
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="~/Assets/User/css/bootstrap.min.css" />
+
+<!-- Slick -->
+<link type="text/css" rel="stylesheet" href="~/Assets/User/css/slick.css" />
+<link type="text/css" rel="stylesheet" href="~/Assets/User/css/slick-theme.css" />
+
+<!-- nouislider -->
+<link type="text/css" rel="stylesheet" href="~/Assets/User/css/nouislider.min.css" />
+
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" href="~/Assets/User/css/font-awesome.min.css">
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="~/Assets/User/css/style.css" />
+
+
+
+<link rel="stylesheet" href="~/Assets/User/css/home.css">
+@*<link rel="stylesheet" href="~/Assets/User/css/library.css">*@
+<link rel="stylesheet" href="~/Assets/User/css/common.css">
+<!-- jQuery Plugins -->
+<script src="~/Assets/User/js/jquery.min.js"></script>
+<script src="~/Assets/User/js/bootstrap.min.js"></script>
+<script src="~/Assets/User/js/slick.min.js"></script>
+<script src="~/Assets/User/js/nouislider.min.js"></script>
+<script src="~/Assets/User/js/jquery.zoom.min.js"></script>
+<script src="~/Assets/User/js/main.js"></script>

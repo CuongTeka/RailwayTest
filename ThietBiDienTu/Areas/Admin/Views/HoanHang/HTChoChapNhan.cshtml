@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.HienThiHoanHangBangTrangThai_Result>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HTKhongChapNhan</title>
+</head>
+<body>
+
+    <table class="table table-striped">
+        <tr>
+            <th> Sản phẩm </th>
+            <th> Lý do hoàn trả </th>
+            <th> Tên khách hàng </th>
+            <th> Mã đơn đặt hàng</th>
+
+            <th> Ngày đặt </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td class="py-1">
+                    <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh) " alt=" image" />
+                    @Html.DisplayFor(modelItem => item.TenSP)
+                </td>
+                <td> @Html.DisplayFor(modelItem => item.LyDonHoanHang) </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaDDH)
+                </td>
+
+                <td> @Html.DisplayFor(modelItem => item.NgayDat)</td>
+                <td>
+                    <a href="@Url.Action("KChapNhan", new { MaHoanHang = item.MaHoanHang })" class="btn btn-outline-danger btn-fw mdi mdi-delete-forever">
+                        Không chấp nhận
+                    </a>
+
+                    <a href="@Url.Action("ChapNhan", new { MaHoanHang = item.MaHoanHang })" class=" btn btn-outline-success btn-fw btn-fw mdi mdi-eye">
+                        Chấp nhận
+                    </a>
+
+                    <a href="@Url.Action("XemCT", new { MaHoanHang = item.MaHoanHang })" class=" btn btn-outline-dark btn-fw mdi mdi-arrow-expand-all">
+                        Xem chi tiết
+                    </a>
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetHoanHangByMaKH_Result>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<style>
+    .table-container {
+        margin: 20px auto;
+        width: 70%;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #ff006e;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .status-accepted {
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .status-rejected {
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    .status-pending {
+        color: #ffc107;
+        font-weight: bold;
+    }
+</style>
+<h2 class="text-center">Hoàn trả</h2>
+<div class="table-container">
+    <table class="table">
+        <tr>
+            <th>
+                Lý do hoàn hàng
+                @*@Html.DisplayNameFor(model => model.LyDonHoanHang)*@
+            </th>
+            <th>
+                Trạng thái
+                @*@Html.DisplayNameFor(model => model.TrangThai)*@
+            </th>
+            <th>
+                Mã đơn đặt hàng
+                @*@Html.DisplayNameFor(model => model.MaDDH)*@
+            </th>
+            <th>
+                Tên người nhận
+                @*@Html.DisplayNameFor(model => model.TenNguoiNhan)*@
+            </th>
+            <th>
+                Chi tiết
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LyDonHoanHang)
+                </td>
+                <td>
+                    @if (item.TrangThai == 1)
+                    {
+                        <span class="status-accepted">Đã chấp nhận</span>
+                        @*<text>Đã chấp nhận</text>*@
+                    }
+                    else if (item.TrangThai == 2)
+                    {
+                        <span class="status-rejected">Không chấp nhận</span>
+                        @*<text>Không chấp nhận</text>*@
+                    }
+                    else if (item.TrangThai == 3)
+                    {
+                        <span class="status-pending">Chờ xét duyệt</span>
+                        @*<text>Chờ xét duyệt</text>*@
+                    }
+                    else
+                    {
+                        <text>Trạng thái không xác định</text>
+                    }
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaDDH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                </td>
+                <td>
+                    <a href="@Url.Action("XemCTHoanTra","HoanTraDonHang", new { maDDH = item.MaDDH })" class="action-link btn-info">Xem đơn đặt hàng</a>
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>

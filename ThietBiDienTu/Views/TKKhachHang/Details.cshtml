@@ -1,0 +1,66 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.KhachHang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <h4>KhachHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTKKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTKKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MKTKKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MKTKKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnhKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDienThoaiKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDienThoaiKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quyen.TenQuyen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quyen.TenQuyen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaKH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

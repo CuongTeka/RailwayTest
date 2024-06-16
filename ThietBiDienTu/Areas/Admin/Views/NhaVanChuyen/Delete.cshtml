@@ -1,0 +1,47 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.NhaVanChuyen
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="card-header bg-danger text-white">
+        <h4>Bạn có chắc chắn muốn xóa nhà vận chuyển @Model.TenNVC không ?</h4>
+    </div>
+    <br />
+    <p>
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </p>
+
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4 class="card-title">Xóa hãng sản xuất</h4>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label class="col-sm-3 col-md-6">Tên nvc:</label>
+                <div class="">
+                    <p class="form-control">@Html.DisplayFor(model => model.TenNVC)</p>
+                </div>
+                <label class="col-sm-3 col-md-6">Chi phí:</label>
+                <div class="">
+                    <p class="form-control">@Html.DisplayFor(model => model.ChiPhi)</p>
+                </div>
+                <label class="col-sm-3 col-md-6">Thông tin liên hệ:</label>
+                <div class="">
+                    <p class="form-control">@Html.DisplayFor(model => model.DiaChiNVC)</p>
+                    <p class="form-control">@Html.DisplayFor(model => model.SDTNVC)</p>
+                </div>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="text-center mt-4">
+                        <input type="submit" value="Xóa" class="btn btn-outline-danger btn-fw mdi mdi-delete-forever " onclick="return confirm('Bạn có chắc chắn muốn xóa nvc này?');" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,128 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetOrderInfoByStatus1_Result>
+
+@{
+    ViewBag.Title = "DonHang";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content-wrapper">
+
+    <div class="container mt-5">
+        <ul class="nav nav-tabs" id="myTabs">
+            <li class="nav-item">
+                <a class="nav-link active" id="tab1" data-toggle="tab" href="#content1">Các đơn hàng chờ xác nhận</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab2" data-toggle="tab" href="#content2">Các đơn hàng đã hoàn thành      <i class="mdi mdi-new-box"></i> @ViewBag.ChoXacNhanCount</a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#content3">Đơn hàng đã hủy  </a>
+
+            </li>
+
+
+        </ul>
+
+        <div class="tab-content mt-2">
+            <div id="content1" class="tab-pane fade show active">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Tình trạng đơn hàng</h4>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Mã đơn</th>
+                                        <th> Tên sản phẩm</th>
+                                        <th> Khách hàng </th>
+
+                                        <th> Ngày đặt </th>
+                                        <th> Đơn vị vận chuyển </th>
+                                        <th> Chức năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        var groupedOrders = Model.GroupBy(item => item.MaDDH).ToList();
+                                    }
+
+                                    @foreach (var group in groupedOrders)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => group.Key)
+                                            </td>
+                                            <td>
+                                                @foreach (var item in group)
+                                                {
+                                                    <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)" class="me-2" alt="image"> @Html.DisplayFor(modelItem => item.TenSP)<br />
+                                                }
+                                            </td>
+                                            <td> @Html.DisplayFor(modelItem => group.First().TenNguoiNhan)</td>
+
+                                            <td> @Html.DisplayFor(modelItem => group.First().NgayDat) </td>
+                                            <td> @Html.DisplayFor(modelItem => group.First().TenNVC)</td>
+                                            <td>
+                                                <a href="@Url.Action("XacNhanDH", new { id = group.First().MaDDH})" class="btn btn-outline-dark btn-fw mdi mdi-pencil-box">
+                                                    Xác nhận
+                                                </a>
+                                                <a href="@Url.Action("XemChiTietDH", new { idDDH = group.First().MaDDH })" class="btn btn-outline-success btn-fw btn-fw mdi mdi-eye">
+                                                    Xem đơn
+                                                </a>
+                                                <a href="@Url.Action("HuyDH", new { MaDDH = group.First().MaDDH })" class="btn btn-outline-danger btn-fw mdi mdi-delete-forever">
+                                                    Hủy
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content2" class="tab-pane fade">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Các đơn đã hoàn thành</h4>
+                        @Html.Action("DaGiao", "DonHang")
+                    </div>
+                </div>
+            </div>
+            <div id="content3" class="tab-pane fade">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Các đơn đã hủy</h4>
+                        @Html.Action("DaHuy", "DonHang")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+            $(document).ready(function () {
+                $("#myTabs a").click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                });
+            });
+    </script>
+
+
+
+
+
+
+
+
+
+</div>

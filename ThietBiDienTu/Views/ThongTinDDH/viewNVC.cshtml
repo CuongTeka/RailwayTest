@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.NhaVanChuyen>
+
+@{
+    Layout = null;
+}
+
+
+
+
+<select id="selectNVC">
+    <option value="">-- Chọn --</option>
+    @foreach (var item in Model)
+    {
+
+        <option>@item.MaNVC - @item.TenNVC - đ @item.ChiPhi</option>
+    }
+
+
+
+</select>
+
+
+

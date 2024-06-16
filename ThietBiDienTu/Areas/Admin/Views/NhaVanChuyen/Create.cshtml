@@ -1,0 +1,60 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.NhaVanChuyen
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <div class="form-group">
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Thêm mới nhà vận chuyển</h4>
+        </div>
+
+        <div class="card-body">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TenNVC, "Tên nhà vận chuyển", new { @class = "aria-label" })
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.TenNVC, new { @class = "form-control", placeholder = "Nhập tên nhà vận chuyển", required = "required" })
+                        @Html.ValidationMessageFor(model => model.TenNVC)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ChiPhi, "Chi phí", new { @class = "aria-label" })
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.ChiPhi, new { @class = "form-control", placeholder = "Nhập chi phí", required = "required" })
+                        @Html.ValidationMessageFor(model => model.ChiPhi)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DiaChiNVC, "Địa chỉ", new { @class = "aria-label" })
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.DiaChiNVC, new { @class = "form-control", placeholder = "Nhập địa chỉ", required = "required" })
+                        @Html.ValidationMessageFor(model => model.DiaChiNVC)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SDTNVC, "Số điện thoại", new { @class = "aria-label" })
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.SDTNVC, new { @class = "form-control", placeholder = "Nhập số điện thoại", required = "required" })
+                        @Html.ValidationMessageFor(model => model.SDTNVC)
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-outline-primary btn-fw mdi mdi-database-plus">Thêm nhà vận chuyển</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

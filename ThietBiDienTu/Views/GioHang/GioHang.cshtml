@@ -1,0 +1,153 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetCartItems_Result>
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    decimal total = 0;
+    int an = 0;
+}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Icon fontanwesome -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="~/Assets/User/css/library.css">
+<!-- Owl Slider css -->
+<link rel="stylesheet" href="~/Assets/User/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/Assets/User/css/owl.theme.default.min.css">
+<!-- Layout -->
+<link rel="stylesheet" href="~/Assets/User/css/common.css">
+<!-- index -->
+<link rel="stylesheet" type="text/css" href="~/Assets/User/css/cart.css">
+<!-- Jquery -->
+@*<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>*@
+<!-- Owl caroucel Js-->
+<script src="~/Assets/User/js/owl.carousel.min.js"></script>
+
+
+<body>
+    <div class="main">
+        <div class="grid wide">
+            <h3 class="main__notify">
+                <div class="main__notify-icon">
+                    <i class="fas fa-check"></i>
+                    <!-- <i class="fas fa-times"></i> -->
+                </div>
+                <div class="main__notify-text">Giỏ hàng đã được cập nhật.</div>
+            </h3>
+            <div class="row">
+                <div class="col l-8 m-12 s-12">
+                    <div class="main__cart">
+                        <div class="row title">
+                            <div class="col l-1 m-1 s-0">Tồn</div>
+                            <div class="col l-4 m-4 s-8">Sản phẩm</div>
+                            <div class="col l-2 m-2 s-0">Giá</div>
+
+                            <div class="col l-2 m-2 s-0">Số lượng</div>
+                            <div class="col l-2 m-2 s-4">Tổng</div>
+                            <div class="col l-1 m-1 s-0">Xóa</div>
+                        </div>
+                        @foreach (var item in Model)
+                        {
+                            total += (decimal)item.ThanhTien;
+                            <div class="row item">
+                                <div class="col l-1 m-1 s-0">
+                                    @Html.DisplayFor(modelItem => item.SoLuongTon)
+                                </div>
+                                <div class="col l-4 m-4 s-8">
+                                    <div class="main__cart-product">
+                                        <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)" alt="">
+                                        <div class="name">@Html.DisplayFor(modelItem => item.TenSP)</div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-2 s-0">
+                                    <div class="main__cart-price"> @String.Format("{0:0,0}", @item.GiaTien)đ</div>
+                                </div>
+                                <div class="col l-2 m-2 s-0">
+                                    <form method="post" action="@Url.Action("UpdateQuantity")">
+                                        <input type="hidden" name="masp" value="@item.MaSP" />
+
+                                        <div class="buttons_added">
+                                            <input class="minus is-form"
+                                                   type="button"
+                                                   value="-"
+                                                   onclick="minusProduct(this.parentElement.querySelector('.input-qty'))">
+                                            <input aria-label="quantity" class="input-qty" max="@item.SoLuongTon" min="-1" name="soluong" type="number" value="@Html.DisplayFor(modelItem => item.SoLuong)">
+                                            <input class="plus is-form"
+                                                   type="button"
+                                                   value="+"
+                                                   onclick="plusProduct(previousElementSibling)">
+                                        </div>
+
+
+                                        <button type="submit">Cập nhật</button>
+                                    </form>
+                                </div>
+                                <div class="col l-2 m-2 s-4">
+                                    <div class="main__cart-price">@String.Format("{0:0,0}", item.ThanhTien) đ</div>
+                                </div>
+
+                                <form action="@Url.Action("RemoveFromCart")" method="post">
+
+
+                                    <input type="hidden" name="masp" value="@item.MaSP" />
+
+                                    <button type="submit">
+                                        <i class="far fa-times-circle"></i>
+                                    </button>
+
+                                </form>
+                            </div>
+                            if(item.SoLuongTon < item.SoLuong)
+                            {
+                                an = 1;
+                            }
+
+                        }
+
+
+                    </div>
+                </div>
+                <div class="col l-4 m-12 s-12">
+                    <div class="main__pay">
+
+
+
+                        <div class="pay-info">
+                            <div class="main__pay-text">
+                                Tổng tiền tạm tính
+                            </div>
+                            <div class="main__pay-price">
+                                @String.Format("{0:0,0}", @total)  ₫
+                            </div>
+                        </div>
+                        
+                        
+                        @if (total > 0 && an==0)
+                        {
+                            <div class="btn btn--default orange"><a href="@Url.Action("ThongTinDDH", "ThongTinDDH", new { })">Tiến hành thanh toán</a></div>
+                        }
+                        else
+                        {
+                            <h4>Vui lòng kiểm tra lại sản phẩm</h4>
+                            <div class="btn btn--default orange"><a href="@Url.Action("SanPham", "SanPham", new { })">Mua lựa sản phẩm</a></div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function plusProduct(qty) {
+        qty.value++;
+    }
+
+    function minusProduct(qty) {
+        qty.value--;
+    }
+</script>
+<script src="~/Assets/User/js/commonscript.js"></script>

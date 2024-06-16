@@ -1,0 +1,98 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.sp_HienThiYeuCauBHTheoMaKH_Result>
+
+@{
+    ViewBag.Title = "YeuCauBH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Danh Sách Yêu Cầu Bảo Hành</h2>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #ff6a00;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+<table class="table">
+    <tr>
+        <th>
+            Ngày yêu cầu
+            @*@Html.DisplayNameFor(model => model.NgayYeuCau)*@
+        </th>
+        <th>
+            Lý do
+            @*@Html.DisplayNameFor(model => model.LyDo)*@
+        </th>
+        <th>
+            Trạng thái
+            @*@Html.DisplayNameFor(model => model.TrangThai)*@
+        </th>
+        <th>
+            Tên khách hàng
+            @*@Html.DisplayNameFor(model => model.TenKhachHang)*@
+        </th>
+
+        <th>
+            Tên sản phẩm
+            @*@Html.DisplayNameFor(model => model.TenSP)*@
+        </th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayYeuCau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LyDo)
+            </td>
+            <td>
+                <span style="font-weight: bold;">Trạng Thái:</span>
+                @if (item.TrangThai == 1)
+                {
+                    <span style="color: green; font-weight: bold;">Được bảo hành</span>
+                }
+                else if (item.TrangThai == 2)
+                {
+                    <span style="color: orange; font-weight: bold;">Không bảo hành</span>
+                }
+                else if (item.TrangThai == 3)
+                {
+                    <span style="color: #DC143C; font-weight: bold;">Chờ xét duyệt</span>
+                }
+
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.TenKhachHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+           
+        </tr>
+    }
+
+</table>            
+

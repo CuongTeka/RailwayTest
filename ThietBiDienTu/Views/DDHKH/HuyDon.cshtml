@@ -1,0 +1,72 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.HuyHang
+
+@*<h2>Cancel Order</h2>
+
+    @using (Html.BeginForm("HuyDon", "DDHKH", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true)
+        <div>
+            <input type="text" name="MaDDH" class="lock" placeholder="Mã đơn">
+            <input type="text" name="LyDo" class="lock" placeholder="Lý do">
+        </div>
+
+        <button type="submit">Hủy</button>
+    }*@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuyDon</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card-container {
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #F0F8FF;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <h2 class="text-center mb-4">Hủy Chờ Xác Nhận Đơn Hàng</h2>
+        <hr />
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+
+            <div style="margin-bottom: 15px;">
+                <label for="MaDDH">Mã đơn đặt hàng:</label>
+                @Html.TextBoxFor(modelItem => Model.MaDDH, new { @class = "form-control", id = "MaDDH" })
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="GhiChu">Lý do hủy đơn:</label>
+                @Html.TextBoxFor(modelItem => Model.LyDonHuy, new { @class = "form-control", id = "LyDonHuy" })
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-danger" style="margin-right: 10px; background-color: #DC143C">Hủy</button>
+                @*<input type="submit" value="Delete" class="btn btn-danger" style="margin-right: 10px; background-color: #DC143C" />*@
+                @Html.ActionLink("Trở lại", "Index", null, new { @class = "btn btn-default" })
+            </div>
+        }
+    </div>
+
+    <br />
+    <br />
+</body>
+</html>

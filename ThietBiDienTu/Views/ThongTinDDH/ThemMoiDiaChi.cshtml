@@ -1,0 +1,161 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.CTDiaChi
+
+@{
+    ViewBag.Title = "ThemMoiDiaChi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    @Html.ActionLink("Quay về", "Index", "DiaChiKH")
+</div>
+<div class="container mt-5">
+    <div class="card p-3 mx-auto" style="max-width: 600px;">
+        <h2 class="text-center">Thêm địa chỉ</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <hr />
+            @Html.ValidationSummary(true)
+
+            <a>Nhập số nhà</a>
+            <div class="form-group">
+
+                <div class="col-md-10">
+
+                    @Html.EditorFor(model => model.SoNha)
+                    @Html.ValidationMessageFor(model => model.SoNha)
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <a>Nhập tên đường</a>
+                <div class="col-md-10">
+
+                    @Html.EditorFor(model => model.TenDuong)
+                    @Html.ValidationMessageFor(model => model.TenDuong)
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <a>Chọn tỉnh thành</a>
+                    <select id="city" name="TinhThanh" class="form-control">
+                        <option value="" selected>Chọn tỉnh thành</option>
+                    </select>
+                    @Html.ValidationMessageFor(model => model.TinhThanh)
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <a>Chọn quận huyện</a>
+                    <select id="district" name="QuanHuyen" class="form-control">
+                        <option value="" selected>Chọn quận huyện</option>
+                    </select>
+                    @Html.ValidationMessageFor(model => model.QuanHuyen)
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <a>Chọn phường xã</a>
+                    <select id="ward" name="PhuongXa" class="form-control">
+                        <option value="" selected>Chọn phường xã</option>
+                    </select>
+                    @Html.ValidationMessageFor(model => model.PhuongXa)
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <a>Địa chỉ mặc định hay không?</a>
+                    <select id="macDinhDropdown" name="MacDinh" class="form-control">
+                        <option value="1">Mặc định</option>
+                        <option value="2">Không mặc định</option>
+                    </select>
+                    @Html.ValidationMessageFor(model => model.MacDinh)
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <a>Tên người nhận</a>
+                    @Html.EditorFor(model => model.TenNguoiNhan)
+                    @Html.ValidationMessageFor(model => model.TenNguoiNhan)
+                </div>
+            </div>
+            <br/>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <a>Số điện thoại người nhận</a>
+                    @Html.EditorFor(model => model.SDTNguoiNhan)
+                    @Html.ValidationMessageFor(model => model.SDTNguoiNhan)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Thêm" class="btn btn-default" style="background-color:crimson" />
+                </div>
+            </div>
+        }
+
+    </div>
+
+    
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script>
+    const host = "https://provinces.open-api.vn/api/";
+    var callAPI = (api) => {
+        return axios.get(api)
+            .then((response) => {
+                renderData(response.data, "city");
+            });
+    }
+    callAPI('https://provinces.open-api.vn/api/?depth=1');
+    var callApiDistrict = (api) => {
+        return axios.get(api)
+            .then((response) => {
+                renderData(response.data.districts, "district");
+            });
+    }
+    var callApiWard = (api) => {
+        return axios.get(api)
+            .then((response) => {
+                renderData(response.data.wards, "ward");
+            });
+    }
+
+    var renderData = (array, select) => {
+        let row = ' <option disable value="">Chọn</option>';
+        array.forEach(element => {
+            row += `<option data-id="${element.code}" value="${element.name}">${element.name}</option>`
+        });
+        document.querySelector("#" + select).innerHTML = row
+    }
+
+    $("#city").change(() => {
+        callApiDistrict(host + "p/" + $("#city").find(':selected').data('id') + "?depth=2");
+        printResult();
+    });
+    $("#district").change(() => {
+        callApiWard(host + "d/" + $("#district").find(':selected').data('id') + "?depth=2");
+        printResult();
+    });
+    $("#ward").change(() => {
+        printResult();
+    })
+
+
+</script>

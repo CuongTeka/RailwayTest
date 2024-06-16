@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content-wrapper">
+
+    <div class="container mt-5">
+        <ul class="nav nav-tabs" id="myTabs">
+            <li class="nav-item">
+                <a class="nav-link active" id="tab1" data-toggle="tab" href="#content1">Các đánh giá đang hiển thị</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab2" data-toggle="tab" href="#content2">Các đánh giá đang ẩn</a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#content3">Đánh giá đang chờ xác nhận          <i class="mdi mdi-new-box"></i> @ViewBag.ChoXacNhanCount</a>
+
+            </li>
+
+
+        </ul>
+
+        <div class="tab-content mt-2">
+            <div id="content1" class="tab-pane fade show active">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Các đánh giá được hiển thị</h4>
+                        @Html.Action("hienThiDanhGia", "DanhGiaSP")
+                    </div>
+                </div>
+            </div>
+            <div id="content2" class="tab-pane fade">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Các đánh giá được ẩn</h4>
+                        @Html.Action("khongHienThiDanhGia", "DanhGiaSP")
+                    </div>
+                </div>
+            </div>
+            <div id="content3" class="tab-pane fade">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Các đánh giá chờ xác nhận</h4>
+                        @Html.Action("choDanhGia", "DanhGiaSP")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myTabs a").click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+
+
+
+    <script>
+        var ratingElements = document.querySelectorAll('.star-rating');
+
+        ratingElements.forEach(function (ratingElement) {
+            var rating = parseInt(ratingElement.getAttribute('data-rating'));
+
+            for (var i = 0; i < rating; i++) {
+                var star = document.createElement('i');
+                star.classList.add('mdi', 'mdi-star', 'menu-icon');
+                ratingElement.appendChild(star);
+            }
+        });
+    </script>
+
+
+
+
+
+</div>

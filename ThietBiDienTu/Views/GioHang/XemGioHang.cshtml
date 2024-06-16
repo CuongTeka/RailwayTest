@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetCartItems_Result>
+@{
+    Layout = null;
+}
+@{
+    decimal total = 0;
+}
+
+
+
+<div class="cart-list">
+
+    @foreach (var item in Model)
+    {
+        total += (decimal)item.ThanhTien;
+        <div class="product-widget">
+            <div class="product-img">
+                <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)" alt="">
+            </div>
+            <div class="product-body">
+                <h3 class="product-name"><a href="#">@Html.DisplayFor(modelItem => item.TenSP)</a></h3>
+                <h4 class="product-price"><span class="qty">@Html.DisplayFor(modelItem => item.SoLuong)x</span>@String.Format("{0:0,0}", item.GiaTien) đ</h4>
+            </div>
+
+            <form action="@Url.Action("RemoveFromProduct")" method="post">
+
+
+                <input type="hidden" name="masp" value="@item.MaSP" />
+
+                <button type="submit">
+                    <i class="fa fa-close"></i>
+                </button>
+
+            </form>
+
+        </div>
+    }
+
+</div>
+<div class="cart-summary">
+    
+    <h5>Tổng thành tiền: @String.Format("{0:0,0}", @total)  ₫</h5>
+</div>
+<div class="cart-btns">
+    @Html.ActionLink("Xem giỏ hàng", "GioHang", "GioHang")
+    @if (total > 0)
+    {
+        @Html.ActionLink("Thanh toán", "ThongTinDDH", "ThongTinDDH")
+    }
+
+</div>
+
+
+
+
+
+

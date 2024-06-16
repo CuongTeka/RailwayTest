@@ -1,0 +1,445 @@
+﻿@{
+    string buoi = "";
+
+
+    // Lấy giờ hiện tại
+    DateTime now = DateTime.Now;
+    int gio = now.Hour;
+
+    // Xác định buổi của ngày
+    if (gio >= 5 && gio < 12)
+    {
+        buoi = "buổi sáng";
+
+    }
+    else if (gio >= 12 && gio < 18)
+    {
+        buoi = "buổi chiều";
+
+    }
+    else
+    {
+        buoi = "buổi tối";
+
+    }
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!--TrangChu-->
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="~/Assets/User/css/bootstrap.min.css" />
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="~/Assets/User/css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="~/Assets/User/css/slick-theme.css" />
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="~/Assets/User/css/nouislider.min.css" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="~/Assets/User/css/font-awesome.min.css">
+
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/Assets/User/css/style.css" />
+
+    <link rel="stylesheet" href="~/Assets/User/css/home.css">
+    @*<link rel="stylesheet" href="~/Assets/User/css/library.css">*@
+    <link rel="stylesheet" href="~/Assets/User/css/common.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- TOP HEADER -->
+        <div id="top-header">
+            <div class="container">
+                <ul class="header-links pull-left">
+                    @if (Session["TaiKhoan"] == null)
+                    {
+                        <li>
+                            <i></i>Chào mừng đến với HUIT Store
+                            <a href="@Url.Action("DangKy", "TrangChu", new { })"> Đăng ký </a> Or
+                            <a href="@Url.Action("DangNhap", "TrangChu", new { })"> Đăng nhập</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <i class="fa fa-user-o"></i>
+                            Chào @buoi @Session["tentk"] !
+
+
+                        </li>
+                    }
+
+
+                    @*<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
+                        <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>*@
+                </ul>
+                <ul class="header-links pull-right">
+                    <li class="dropdown">
+                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                            <i class="fa fa-user-o"></i>Tài khoản <img src="" />
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: #000000">
+                            <li><a href="@Url.Action("Edit", "TKKhachHang", new { })" class="dropdownMenuLink">Tài khoản của tôi</a></li>
+                            <li><a href="@Url.Action("Index", "DDHKH", new { })" class="dropdownMenuLink">Đơn mua</a></li>
+                            <li><a href="@Url.Action("DangNhap", "TrangChu", new { })">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <!-- /TOP HEADER -->
+        <!-- MAIN HEADER -->
+        <div id="header">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- LOGO -->
+                    <div class="col-md-3">
+                        <div class="header-logo">
+                            <a href="@Url.Action("TrangChu", "TrangChu")" class="logo">
+                                <img src="~/Assets/User/images/HUIT.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /LOGO -->
+                    <!-- SEARCH BAR -->
+                    <div class="col-md-6">
+                        <div class="header-search">
+                            @using (Html.BeginForm("TimKiem", "TrangChu"))
+                            { 
+                                    <select class="input-select">
+                                    <option value="0">Tất cả sản phẩm</option>
+                                    </select>
+                                    <input class="input" type="text" name="timkiem" placeholder="Tìm kiếm">
+                                    <button class="search-btn">Tìm kiếm</button>
+                            }
+                        </div>
+                    </div>
+                    <!-- /SEARCH BAR -->
+                    <!-- ACCOUNT -->
+                    <div class="col-md-3 clearfix">
+                        <div class="header-ctn">
+                            <!-- Wishlist -->
+                            <div>
+                                <a href="#">
+                                    <i class="fa fa-heart-o"></i>
+                                    <span>Yêu thích</span>
+                                    <div class="qty">2</div>
+                                </a>
+                            </div>
+                            <!-- /Wishlist -->
+                            <!-- Cart -->
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>Giỏ hàng</span>
+                                    @Html.Action("soLuongTrongGio", "GioHang")
+
+                                </a>
+                                <div class="cart-dropdown">
+                                    @if (Session["TaiKhoan"] != null)
+                                    {
+                                        @Html.Action("XemGioHang", "GioHang")
+                                    }
+                                    else
+                                    {
+                                        <div class="product-widget">
+                                            <h5> Bạn cần đăng nhập để xem giỏ hàng</h5>
+                                            @Html.ActionLink("-> Đăng nhập", "DangNhap", "TrangChu")
+                                        </div>
+                                    }
+                                </div>
+
+                            </div>
+                            <!-- /Cart -->
+                            <!-- Menu Toogle -->
+                            <div class="menu-toggle">
+                                <a href="#">
+                                    <i class="fa fa-bars"></i>
+                                    <span>Menu</span>
+                                </a>
+                            </div>
+                            <!-- /Menu Toogle -->
+                        </div>
+                    </div>
+                    <!-- /ACCOUNT -->
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- /MAIN HEADER -->
+        <!-- Menu -->
+        @Html.Action("DSDanhMuc","TrangChu")
+        <!--/Menu-->
+    </header>
+    <!-- /HEADER -->
+
+    @RenderBody()
+    <!-- FOOTER -->
+    <footer id="footer">
+        <!-- top footer -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Giới thiệu</h3>
+
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fa fa-map-marker"></i>140 Lê Trong Tấn, p.Tây Thạnh, q.Tân Phú, Tp.HCM</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+84 222 666 888 </a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o"></i>thietbidientu@email.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Thông tin và chính sách</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Mua hàng và thanh toán online</a></li>
+                                <li><a href="#">Chính sách giao hàng</a></li>
+                                <li><a href="#">Thông tin bào hành</a></li>
+                                <li><a href="#">Thông tin hóa đơn mua hàng</a></li>
+                                <li><a href="#">Trung tâm bảo hành chính hãng</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-xs"></div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Dịch vụ</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Ưu đãi thanh toán</a></li>
+                                <li><a href="#">Dịch vụ bảo hành điện thoại</a></li>
+                                <li><a href="#">Dịch vụ chăm sóc khách hàng</a></li>
+                                <li><a href="#">Chính sách đổi trả</a></li>
+                                <li><a href="#">Tuyển dụng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <div class="newsletter">
+                                <h3 class="footer-title">Đăng ký</h3>
+                                <form>
+                                    <input class="input" type="email" placeholder="Nhập Email">
+                                    <button class="newsletter-btn">@*<i class="fa fa-envelope"></i>*@ Đăng ký</button>
+                                </form>
+                                <ul class="newsletter-follow">
+                                    <li>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="col-md-3 col-xs-6">
+                           <div class="footer">
+                               <h3 class="footer-title">Đăng ký</h3>
+                               <ul class="footer-list">
+                                   <li class="footer__item">
+                                       <span class="footer__text">Đăng ký để nhận được được thông tin ưu đãi mới nhất từ chúng tôi.</span>
+                                   </li>
+                                   <li class="footer__item">
+                                       <div class="send-email">
+                                           <input class="send-email__input" type="email" placeholder="Nhập Email...">
+                                           <a href="#" class="send-email__link">
+                                               <i class="fas fa-paper-plane"></i>
+                                           </a>
+                                       </div>
+                                   </li>
+                               </ul>
+                           </div>
+                        </div>*@
+                    @*<div class="col-md-3 col-xs-6">
+                            <div class="footer">
+                                <h3 class="footer-title">Service</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">View Cart</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a href="#">Track My Order</a></li>
+                                    <li><a href="#">Help</a></li>
+                                </ul>
+                            </div>
+                        </div>*@
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /top footer -->
+        <!-- bottom footer -->
+       
+        <!-- /bottom footer -->
+    </footer>
+    <!-- /FOOTER -->
+
+</body>
+</html>
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    var element = document.getElementById("yourElementId"); // Thay "yourElementId" b
+
+    chatbox.setAttribute("page_id", "105913298384666");
+    chatbox.setAttribute("attribution", "biz_inbox");
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v10.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+    $(document).ready(function () {
+        var sync1 = $("#sync1 ");
+        var sync2 = $("#sync2 ");
+        var slidesPerPage = 4;
+        var syncedSecondary = true;
+        sync1.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true
+        })
+        sync2
+            .on('initialized.owl.carousel', function () {
+                sync2.find(".owl-item ").eq(0).addClass("current ");
+            })
+            .owlCarousel({
+                items: 4,
+                dots: false,
+                nav: false,
+                margin: 30,
+                smartSpeed: 200,
+                slideSpeed: 500,
+                slideBy: 4,
+                responsiveRefreshRate: 100
+            }).on('changed.owl.carousel', syncPosition2);
+
+        function syncPosition(el) {
+            var count = el.item.count - 1;
+            var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+
+            if (current < 0) {
+                current = count;
+            }
+            if (current > count) {
+                current = 0;
+            }
+
+            //end block
+
+            sync2
+                .find(".owl-item ")
+                .removeClass("current ")
+                .eq(current)
+                .addClass("current ");
+            var onscreen = sync2.find('.owl-item.active').length - 1;
+            var start = sync2.find('.owl-item.active').first().index();
+            var end = sync2.find('.owl-item.active').last().index();
+
+            if (current > end) {
+                sync2.data('owl.carousel').to(current, 100, true);
+            }
+            if (current < start) {
+                sync2.data('owl.carousel').to(current - onscreen, 100, true);
+            }
+        }
+
+        function syncPosition2(el) {
+            if (syncedSecondary) {
+                var number = el.item.index;
+                sync1.data('owl.carousel').to(number, 100, true);
+            }
+        }
+
+        sync2.on("click ", ".owl-item ", function (e) {
+            e.preventDefault();
+            var number = $(this).index();
+            sync1.data('owl.carousel').to(number, 300, true);
+        });
+    });
+
+    $('.owl-carousel.hight').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 6
+            }
+        }
+    })
+</script>
+<!-- Script common -->
+<script>
+    function calcRate(r) {
+        const f = ~~r, //Tương tự Math.floor(r)
+            id = 'star' + f + (r % f ? 'half' : '')
+        id && (document.getElementById(id).checked = !0)
+    }
+</script>
+<!-- jQuery TrangChu,ChiTietSanPham -->
+<!-- jQuery TrangChu,ChiTietSanPham -->
+<script src="~/Assets/User/js/bootstrap.min.js"></script>
+<script src="~/Assets/User/js/slick.min.js"></script>
+<script src="~/Assets/User/js/nouislider.min.js"></script>
+
+<!-- jQuery Plugins -->
+<script src="~/Assets/User/js/jquery.min.js"></script>
+<script src="~/Assets/User/js/bootstrap.min.js"></script>
+<script src="~/Assets/User/js/slick.min.js"></script>
+<script src="~/Assets/User/js/nouislider.min.js"></script>
+<script src="~/Assets/User/js/jquery.zoom.min.js"></script>
+<script src="~/Assets/User/js/main.js"></script>
+

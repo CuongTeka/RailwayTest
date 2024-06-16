@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetOrderInfoByCustomerIdAndOrderIDAndStatus_Result>
+@{
+    Layout = null;
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    img {
+        max-width: 100px;
+        max-height: 100px;
+        display: block;
+        margin: auto;
+    }
+</style>
+<table>
+    <tr>
+        <th>Tên sản phẩm</th>
+        <th>Giá sản phẩm</th>
+        <th>Hình ảnh sản phẩm</th>
+        <th>Trạng thái</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <a href="@Url.Action("ChiTietSanPham", "SanPham", new { id = item.MASP })" class="product-link">
+            <td>@Html.DisplayFor(modelItem => item.TenSP)</td>
+            <td>@Html.DisplayFor(modelItem => item.ThanhTien)</td>
+            <td>
+                <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)" alt="Product Image" />
+            </td>
+            <td>@Html.DisplayFor(modelItem => item.TrangThai)</td>
+            </a>
+        </tr>
+    }
+</table>
+                      

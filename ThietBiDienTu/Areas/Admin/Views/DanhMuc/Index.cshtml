@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.DanhMuc>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Quản lý danh mục sản phẩm</h4>
+
+            <p class="card-description">
+                @Html.ActionLink("Thêm mới danh mục", "Create", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-database-plus" })
+            </p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Tên danh mục</th>
+
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.TenDanhMuc)</td>
+
+
+                            <td>
+                                @Html.ActionLink("Sửa", "Edit", new { id = item.MaDanhMuc }, new { @class = "btn btn-outline-dark btn-fw mdi mdi-pencil-box" }) |
+                                @Html.ActionLink("Xem chi tiết", "Details", new { id = item.MaDanhMuc }, new { @class = "btn btn-outline-success btn-fw btn-fw mdi mdi-eye" }) |
+
+                                <a href="@Url.Action("Delete", new { id = item.MaDanhMuc })" class="btn btn-outline-danger btn-fw mdi mdi-delete-forever">
+                                    Xóa
+                                </a>
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>  

@@ -1,0 +1,74 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.NhanVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+
+
+    <p>
+
+        @Html.ActionLink("Thêm nhân ", "Create", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-database-plus" })
+
+    </p>
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Quản lý nhân sự</h4>
+                <table class="table">
+                    <tr>
+                        <th>
+                            Tên tài khoản
+                        </th>
+                        <th>
+                            Mật khẩu
+                        </th>
+                        <th>
+                            Họ tên
+                        </th>
+                        <th>
+                            Hình ảnh
+                        </th>
+                        <th>
+                            Tên quyền
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TenTaiKhoanAdmin)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MatKhauAdmin)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HoTenAdmin)
+                            </td>
+                            <td>
+                                <div class="nav-profile-image">
+                                    <img src=" @Html.DisplayFor(modelItem => item.AnhAdmin)">
+
+                                </div>
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Quyen.TenQuyen)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Sửa", "Edit", new { id = item.MaAdmin }, new {@class="btn btn-outline-primary btn-fw mdi mdi-database-plus"}) |
+                                @Html.ActionLink("Xem chi tiết", "Details", new { id = item.MaAdmin }, new { @class = "btn btn-outline-dark btn-fw mdi mdi-pencil-box" })) |
+                                @Html.ActionLink("Xóa", "Delete", new { id = item.MaAdmin }, new { @class = "btn btn-outline-success btn-fw btn-fw mdi mdi-eye" }))
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

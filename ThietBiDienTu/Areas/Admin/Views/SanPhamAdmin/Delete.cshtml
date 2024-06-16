@@ -1,0 +1,185 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.SanPham
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="card-header bg-danger text-white">
+        <h4>Bạn có chắc chắn muốn xóa không ?</h4>
+    </div>
+    <div class="content-wrapper">
+        <p>
+            @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+        </p>
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <h5 class="card-title">Thông tin sản phẩm</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="~/Assets/img/@Model.HinhAnh.LinkHinhAnhChinh" alt="Hình sản phẩm" />
+                    </div>
+                    <div class="col-md-8">
+                        <dl class="row">
+                            <dt class="col-sm-3 col-md-6">Tên sản phẩm:</dt>
+                            <dd class="col-sm-6">@Html.DisplayFor(model => model.TenSP)</dd>
+                            <hr />
+
+                            <dt class="col-sm-3 col-md-6">Giá tiền:</dt>
+                            <dd class="col-sm-6">@Html.DisplayFor(model => model.GiaTien)</dd>
+                            <hr />
+
+                            <dt class="col-sm-3 col-md-6">Số lượng tồn kho:</dt>
+                            <dd class="col-sm-6">@Html.DisplayFor(model => model.SoLuongTon)</dd>
+                            <hr />
+
+                            <dt class="col-sm-3 col-md-6">Mô tả:</dt>
+                            <dd class="col-sm-6">@Html.Raw(Model.MoTa)</dd>
+                            <hr />
+
+
+                            <dt class="col-sm-3 col-md-6">Thông số kỹ thuật:</dt>
+                            <dd class="col-sm-6">@Html.Raw(Model.ThongSoKyThuat)</dd>
+                            <hr />
+
+
+
+                            <dt class="col-sm-3 col-md-6">Ngày tạo:</dt>
+                            <dd class="col-sm-6">@Html.DisplayFor(model => model.NgayTao)</dd>
+                            <hr />
+
+                            <dt class="col-sm-3 col-md-6">Thời gian bảo hành:</dt>
+                            <dd class="col-sm-6">@Html.DisplayFor(model => model.ThoiGianBaoHanh)</dd>
+                            <hr />
+
+                            <dt class="col-sm-3 col-md-6">Danh mục:</dt>
+                            <dd class="col-sm-6">@Html.DisplayFor(model => model.DanhMuc.TenDanhMuc)</dd>
+                            <hr />
+
+                            <dt class="col-sm-3 col-md-6">Tên hãng:</dt>
+                            <dd class="col-sm-6">@Html.DisplayFor(model => model.HangSanXuat.TenHang)</dd>
+                            <hr />
+                        </dl>
+                    </div>
+                </div>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-default" />
+
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@*<h2>Delete</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>SanPham</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TenSP)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TenSP)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.GiaTien)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.GiaTien)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SoLuongTon)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SoLuongTon)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MoTa)
+            </dt>
+
+            <dd>
+                @Html.Raw(Model.MoTa)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThongSoKyThuat)
+            </dt>
+
+            <dd>
+                @Html.Raw(Model.ThongSoKyThuat)
+            </dd>
+
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NgayTao)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NgayTao)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThoiGianBaoHanh)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThoiGianBaoHanh)
+            </dd>
+
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DanhMuc.TenDanhMuc)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DanhMuc.TenDanhMuc)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HinhAnh.LinkHinhAnhChinh)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HinhAnh.LinkHinhAnhChinh)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HangSanXuat.TenHang)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HangSanXuat.TenHang)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>*@

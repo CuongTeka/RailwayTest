@@ -1,0 +1,122 @@
+﻿@model List<ThietBiDienTu.Areas.Admin.Models.MaGiamGia>
+
+@using System
+
+@{
+    Layout = null;
+}
+
+@foreach (var magiamgia in Model)
+{
+
+    int daysLeft = 0;
+    int hoursLeft = 0;
+    int minutesLeft = 0;
+    int seconds = 0;
+
+    DateTime? startDate = magiamgia.NgayBatDau;
+    DateTime? endDate = magiamgia.NgayKetThuc;
+
+    if (startDate != null && endDate != null)
+    {
+
+        DateTime currentDate = DateTime.Now;
+
+        TimeSpan timeLeft = endDate.Value - currentDate;
+
+        double secondsLeft = timeLeft.TotalSeconds;
+
+        daysLeft = (int)Math.Floor(secondsLeft / 86400);
+
+        secondsLeft -= daysLeft * 86400;
+
+        hoursLeft = (int)Math.Floor(secondsLeft / 3600);
+
+        secondsLeft -= hoursLeft * 3600;
+
+        minutesLeft = (int)Math.Floor(secondsLeft / 60);
+
+        seconds = (int)secondsLeft % 60;
+
+    }
+
+    <div class="hot-deal">
+
+
+
+        <ul class="hot-deal-countdown">
+
+            <li id="days">
+                <div>
+                    @if (daysLeft > 0)
+                    {
+                        <h3>@daysLeft</h3>
+                    }
+                    else
+                    {
+                        <h3>0</h3>
+                    }
+                    <span>Ngày</span>
+                </div>
+            </li>
+
+            <li id="hours">
+                <div>
+                    @if (hoursLeft > 0)
+                    {
+                        <h3>@hoursLeft</h3>
+                    }
+                    else
+                    {
+                        <h3>0</h3>
+                    }
+                    <span>Giờ</span>
+                </div>
+            </li>
+
+            <li id="minutes">
+                <div>
+                    @if (minutesLeft > 0)
+                    {
+                        <h3>@minutesLeft</h3>
+                    }
+                    else
+                    {
+                        <h3>0</h3>
+                    }
+                    <span>Phút</span>
+                </div>
+            </li>
+
+            <li id="seconds">
+                <div>
+                    @if (seconds > 0)
+                    {
+                        <h3>@seconds</h3>
+                    }
+                    else
+                    {
+                        <h3>0</h3>
+                    }
+                    <span>Giây</span>
+                </div>
+            </li>
+
+        </ul>
+
+        <h2 class="text-uppercase">Ưu đãi hấp dẫn tuần lễ vàng</h2>
+
+        <p>Mã giảm giá lên đến @magiamgia.TiLeGiam%</p>
+        @if (Convert.ToInt32(Session["daluu"]) == 0)
+        {
+            @Html.ActionLink("Sưu tầm", "LayMGG", new { mgg = magiamgia.MaGiamGia1 }, new { @class = "primary-btn cta-btn" })
+        }
+        else
+        {
+            <button class="primary-btn cta-btn" disabled>Đã lưu</button>
+        }
+
+
+
+    </div>
+}

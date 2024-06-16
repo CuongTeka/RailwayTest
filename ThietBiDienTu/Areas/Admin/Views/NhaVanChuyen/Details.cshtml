@@ -1,0 +1,57 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.NhaVanChuyen
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="form-group">
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </div>
+
+    <div class="card">
+        <div class=" card-header" style="background-color: #C8E2B1; ">
+            <h4 class="card-title">Xem chi tiết nhà vận chuyển</h4>
+        </div>
+
+        <div class="card-body">
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label>Tên nhà vận chuyển :</label>
+                        <input type="text" class="form-control" value="@Html.DisplayFor(model => model.TenNVC)" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label>Chi phí</label>
+                        <input type="text" class="form-control" value="@Html.DisplayFor(model => model.ChiPhi) " readonly>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label>Thông tin liên hệ</label>
+                        <input type="text" class="form-control" value="@Html.DisplayFor(model => model.DiaChiNVC)" readonly>
+                        <input type="text" class="form-control" value="@Html.DisplayFor(model => model.SDTNVC)" readonly>
+                    </div>
+                </div>
+
+
+                <div class="text-center mt-4">
+                    <p class="card-description">
+                        @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.MaNVC }, new { @class = "btn btn-outline-dark btn-fw mdi mdi-pencil-box" })
+                    </p>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

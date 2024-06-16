@@ -1,0 +1,162 @@
+﻿
+@{
+    ViewBag.Title = "AdminTrangChu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white me-2">
+                    <i class="mdi mdi-home"></i>
+                </span> Trang chủ
+            </h3>
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span></span>Tổng hợp <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-danger card-img-holder text-white">
+                    <div class="card-body">
+                        <img src="~/Assets/Admin/Images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">
+                            Thu nhập tháng này <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                        </h4>
+                        <h2 class="mb-5">@String.Format("{0:0,0}", @ViewBag.TienTuan) đ</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-info card-img-holder text-white">
+                    <div class="card-body">
+                        <img src="~/Assets/Admin/Images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">
+                            Hóa đơn tháng này <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                        </h4>
+                        <h2 class="mb-5">@ViewBag.SLHDTuan</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-success card-img-holder text-white">
+                    <div class="card-body">
+                        <img src="~/Assets/Admin/Images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">
+                            Số lượng sản bán ra <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                        </h4>
+                        <h2 class="mb-5">@ViewBag.SLSPTuan</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="clearfix">
+                            <p class="card-title float-left">Thống kê số lượng hóa đơn mua sắm trong năm nay @ViewBag.NamHienTai</p>
+                            <div class="chart-container">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 grid-margin stretch-card">
+                @Html.Action("ThongKeSPGanHet", "AdminTrangChu")
+            </div>
+
+
+
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+            <div class="container-fluid d-flex justify-content-between">
+
+            </div>
+        </footer>
+        <!-- partial -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var gradientStrokeViolet = ctx.createLinearGradient(0, 0, 0, 181);
+        gradientStrokeViolet.addColorStop(0, 'rgba(128, 255, 219, 1)');
+        gradientStrokeViolet.addColorStop(1, 'rgba(51, 116, 230, 1)');
+
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+                datasets: [
+                    {
+                        label: "Mua Sắm",
+                        borderColor: gradientStrokeViolet,
+                        backgroundColor: gradientStrokeViolet,
+                        hoverBackgroundColor: gradientStrokeViolet,
+                        pointRadius: 0,
+                        borderWidth: 1,
+                        data: [@ViewBag.T1, @ViewBag.T2, @ViewBag.T3, @ViewBag.T4, @ViewBag.T5, @ViewBag.T6, @ViewBag.T7, @ViewBag.T8, @ViewBag.T9, @ViewBag.T10, @ViewBag.T11, @ViewBag.T12]
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                legend: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            display: false,
+                            min: 0,
+                            stepSize: 20,
+                            max: 80
+                        },
+                        gridLines: {
+                            drawBorder: false,
+                            color: '#322f2f',
+                            zeroLineColor: '#322f2f'
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                            drawBorder: false,
+                            color: 'rgba(0,0,0,1)',
+                            zeroLineColor: 'rgba(235,237,242,1)'
+                        },
+                        ticks: {
+                            padding: 20,
+                            fontColor: "#9c9fa6",
+                            autoSkip: true,
+                        },
+                        categoryPercentage: 0.5,
+                        barPercentage: 0.5
+                    }]
+                },
+                elements: {
+                    point: {
+                        radius: 0
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+

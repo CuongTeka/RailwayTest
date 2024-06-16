@@ -1,0 +1,64 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.KhachHang
+@{
+    ViewBag.Title = "QuenMK";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+@using (Html.BeginForm("QuenMK", "TrangChu", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+                <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang Chủ</a></li>
+                <li class="active">Đăng Ký</li>
+            </ol>
+        </div>
+    </div>
+    <div class="login-page">
+        <div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+            <h3 class="title">Quên mật khẩu</h3>
+        </div>
+        <div class="widget-shadow">
+            <div class="login-top wow fadeInUp animated" data-wow-delay=".7s">
+                <h4>Đã nhớ mật khẩu ?@Html.ActionLink("Đăng nhập", "DangNhap", "TrangChu", null, new { @class = "active" }) </h4>
+            </div>
+            <div class="login-body">
+                @using (Html.BeginForm())
+                {
+                    <a>Tên tài khoản</a><span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.TenTKKH, new { @class = "form-control", required = "required" })
+
+                    <a>Địa chỉ Email</a><span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", required = "required" })
+
+                    <a>Số điện thoại</a><span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.SoDienThoaiKH, new { @class = "form-control", required = "required" })
+                    <div class="col-md-4" style="color:orangered">
+                        @Html.ValidationSummary()
+                    </div>
+                    <input type="submit" value="Yêu cầu" class="btn btn-primary" onclick="showConfirmation()"/>
+                }
+
+            </div>
+        </div>
+    </div>
+    <script src="~/Assets/User/js/main.js"></script>
+    <script src="~/Assets/User/js/bootstrap.js"></script>
+}
+<script>
+    function showConfirmation() {
+        
+        var mkkhValue = '@Session["MKKH"]';
+
+        if (mkkhValue) {
+            
+            alert('MK Khách hàng là ' + mkkhValue);
+        }
+    }
+</script>

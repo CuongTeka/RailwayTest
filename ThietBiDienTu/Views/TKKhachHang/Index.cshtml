@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.KhachHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenTKKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MKTKKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnhKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDienThoaiKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quyen.TenQuyen)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenTKKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MKTKKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnhKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoDienThoaiKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quyen.TenQuyen)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaKH }) |
+
+            </td>
+        </tr>
+    }
+
+</table>

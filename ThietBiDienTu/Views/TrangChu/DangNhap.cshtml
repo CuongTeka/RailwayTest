@@ -1,0 +1,56 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.KhachHang
+
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("DangNhap", "TrangChu", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true)
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow fadeInUp" data-wow-delay=".5s">
+                <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang Chủ</a></li>
+                <li class="active">Đăng Nhập</li>
+            </ol>
+        </div>
+    </div>
+    <div class="login-page">
+        <div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+            <h3 class="title">Đăng Nhập<span> Tài Khoản</span></h3>
+        </div>
+        <div class="widget-shadow">
+            <div class="login-top wow fadeInUp animated" data-wow-delay=".7s">
+                <h4>Chào mừng bạn đã trở lại  HUIT Store ! <br> Bạn không phải là thành viên? @Html.ActionLink("Đăng ký ngay", "DangKy", "TrangChu", null, new { @class = "active" }) </h4>
+            </div>
+            <div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
+                <form>
+                    <input type="text" class="user" name="tentaikhoan" placeholder="Tên tài khoản" value="@ViewBag.tentk" required="">
+                    <input type="password" name="matkhau" class="lock" placeholder="Mật Khẩu" required="">
+                    <div class="col-md-4" style="color:orangered">
+                        @Html.ValidationSummary()
+                        @if (Session["SoLanDangNhapThatBai"] != null)
+                        {
+                            <p>Số lần đăng nhập còn lại: @(5 - (int)Session["SoLanDangNhapThatBai"])</p>
+                        }
+                    </div>
+                    <input type="submit" name="Sign In" value="Đăng Nhập">
+                    <div class="forgot-grid">
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Ghi nhớ đăng nhập</label>
+                        <div class="forgot">
+                            <a href="@Url.Action("QuenMK","TrangChu")">Quên Mật Khẩu?</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+
+}
+

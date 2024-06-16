@@ -1,0 +1,170 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.sp_HienThiHuyDH_Result>
+
+@{
+    Layout = null;
+}
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>DaHuy</title>
+    </head>
+    <body>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NgayDat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TrangThai)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ThanhTien)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SDTNguoiNhan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenNguoiNhan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SoNha)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenDuong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PhuongXa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuanHuyen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TinhThanh)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GhiChu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KhachHang.TenKH)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaGiamGia1.TenMGG)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NhaVanChuyen.TenNVC)
+                </th>
+                <th></th>
+            </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThanhTien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SDTNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoNha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenDuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhuongXa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuanHuyen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TinhThanh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GhiChu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KhachHang.TenKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaGiamGia1.TenMGG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NhaVanChuyen.TenNVC)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Xem đơn đã hủy", "CTDaHuy", new { idDDH=item.MaDDH }) |
+
+                </td>
+            </tr>
+        }
+
+        </table>
+    </body>
+    </html>*@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>DaHuy</title>
+
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2 style="text-align: center; margin-bottom: 20px;">Danh sách Đơn Đặt Hàng đã hủy</h2>
+        <hr />
+
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; border: 1px solid #dee2e6;">
+            <thead style="background-color: #f8f9fa;">
+                <tr>
+                    <th style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">Ngày đặt</th>
+                    <th style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">Mã đơn</th>
+                    <th style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">Lý do</th>
+                    <th style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">Tên người hủy</th>
+                    <th style="border: 1px solid #dee2e6; padding: 8px; text-align: center;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">@Html.DisplayFor(modelItem => item.NgayHuy)</td>
+                        <td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">@Html.DisplayFor(modelItem => item.MaDDH)</td>
+                        <td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">@Html.DisplayFor(modelItem => item.LyDonHuy)</td>
+
+                        <td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">@item.TenKH | @item.TenKH</td>
+
+                        <td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">
+                            @Html.ActionLink("Xem đơn đã hủy", "CTDaHuy", new { idDDH = item.MaDDH }, new { @class = "btn btn-info btn-sm" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+    @*<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetOrderInfoByMaDDH_Result>
+@{
+    ViewBag.Title = "XemChiTietDH";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    decimal total = 0;
+    decimal tilegiam = 0;
+    decimal tiengiam = 0;
+    string dvvc = "";
+    decimal chiphivc = 0;
+    decimal tongtien = 0;
+}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Icon fontanwesome -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="~/Assets/User/css/library.css">
+<!-- Owl Slider css -->
+<link rel="stylesheet" href="~/Assets/User/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/Assets/User/css/owl.theme.default.min.css">
+<!-- Layout -->
+<link rel="stylesheet" href="~/Assets/User/css/common.css">
+<!-- index -->
+<link rel="stylesheet" type="text/css" href="~/Assets/User/css/cart.css">
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Owl caroucel Js-->
+<script src="~/Assets/User/js/owl.carousel.min.js"></script>
+<script src="~/Assets/User/js/commonscript.js"></script>
+<style>
+    .container {
+        font-size: 20px;
+    }
+
+    .card-body {
+        font-size: 14px;
+    }
+
+    .row.title, .row.item {
+        padding: 5px 0;
+        margin-bottom: 5px;
+    }
+
+    .main__cart-product img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card {
+        width: auto;
+    }
+
+    .total-amount h3, .total-amount h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+</style>
+<div class="content-wrapper">
+    <div class="container">
+        <div class="form-group">
+            @Html.ActionLink("Quay về", "QuanLyDonHang", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+        </div>
+        <h3 class="text-center">Chi Tiết Đơn Hàng</h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="row title">
+                    <div class="col-1">Mã đơn </div>
+                    <div class="col-md-5">Sản phẩm</div>
+                    <div class="col-2">Giá</div>
+                    <div class="col-2">Số lượng</div>
+                    <div class="col-2">Thành tiền</div>
+                </div>
+
+                @foreach (var item in Model)
+                {
+                    total = (decimal)item.ThanhTien;
+                    tilegiam = (decimal)item.TiLeGiam;
+                    dvvc = (string)item.TenNVC;
+                    tongtien += (decimal)item.ThanhTienSP;
+                    tiengiam = tongtien * tilegiam / 100;
+                    chiphivc = (decimal)item.ChiPhi;
+
+                    <div class="row item">
+                        <div class="col-1">
+                            @Html.DisplayFor(modelItem => item.MaDDH)
+                        </div>
+                        <div class="col-md-5">
+                            <div class="main__cart-product">
+                                <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)" alt="">
+                                <div>@Html.DisplayFor(modelItem => item.TenSP)</div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div style="color:red">@String.Format("{0:0,0}", @item.GiaTien)đ</div>
+                        </div>
+                        <div class="col-2">
+                            <div class="buttons_added">
+                                @Html.DisplayFor(modelItem => item.SoLuong)
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div style="color:red">@String.Format("{0:0,0}", item.ThanhTienSP) đ</div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <br />
+        <div class="col-md-4">
+            <div class="total-amount">
+                <h3>Tổng tiền hàng: @String.Format("{0:0,0}", @tongtien) đ</h3>
+                <h3>Mã giảm giá: -@String.Format("{0:0,0}", @tiengiam) đ</h3>
+                <h3>Phí vận chuyển @dvvc: @String.Format("{0:0,0}", @chiphivc) đ</h3>
+                <h2 style="color:#ff0000">Tổng tiền cần thanh toán: @String.Format("{0:0,0}", @total) ₫</h2>
+            </div>
+        </div>
+    </div>
+</div>

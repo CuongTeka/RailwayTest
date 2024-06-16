@@ -1,0 +1,85 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.MaGiamGia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Mã giảm giá</h4>
+                <p>
+                    @Html.ActionLink("Tạo mới", "Create", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-database-plus" })
+                </p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Trạng thái</th>
+                            <th> Mã Giảm Giá </th>
+                            <th> Số tiền giảm </th>
+                            <th> Đã áp dụng </th>
+
+                            <th> Ngày kích hoạt </th>
+                            <th> Ngày hết hạn </th>
+                            <th>Chức năng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (item.TrangThai == 1)
+                                    {
+                                        <span>Đang ở sự kiện</span>
+                                    }
+                                    else if (item.TrangThai == 2)
+                                    {
+                                        <span>Đang chờ</span>
+                                    }
+                                    else if (item.TrangThai == 3)
+                                    {
+                                        <span>Bị ẩn</span>
+                                    }
+                            </td>
+
+                            <td> @Html.DisplayFor(modelItem => item.MaGiamGia1) </td>
+
+                            <td> @Html.DisplayFor(modelItem => item.TiLeGiam)% </td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: @Html.DisplayFor(modelItem => item.SLDaSuDung)%" aria-valuenow="@Html.DisplayFor(modelItem => item.SLDaSuDung)" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </td>
+                            <td> @Html.DisplayFor(modelItem => item.NgayBatDau) </td>
+                            <td> @Html.DisplayFor(modelItem => item.NgayKetThuc) </td>
+                            <td>
+
+                                <button type="button">
+
+                                    @Html.ActionLink("Ẩn", "AnMGG", new { mgg = item.MaGiamGia1 }, new { @class = "btn btn-danger" })
+                                </button>
+                                <button type="button">
+                                    @Html.ActionLink("Cập nhật", "CapNhatSK", new { mgg = item.MaGiamGia1 }, new { @class = "btn btn-primary" })
+
+                                </button>
+                                <button type="button">
+                                    @Html.ActionLink("Vào chờ", "Cho", new { mgg = item.MaGiamGia1 }, new { @class = "btn btn-primary" })
+
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,140 @@
+﻿
+@model PagedList.IPagedList<ThietBiDienTu.Areas.Admin.Models.SanPham>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "TimKiemSanPham";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <p>
+
+        @Html.ActionLink("Thêm sản phẩm", "Create", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-database-plus" })
+
+    </p>
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Quản lý sản phẩm</h4>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th> Tên sản phẩm </th>
+                            <th> Giá tiền </th>
+                            <th> Số lượng tồn kho</th>
+
+                            <th> Danh mục </th>
+                            <th> nhà vận chuyển </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="py-1">
+                                    <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.HinhAnh.LinkHinhAnhChinh)" alt="image" />
+                                </td>
+                                <td> @Html.DisplayFor(modelItem => item.TenSP) </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.GiaTien)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.SoLuongTon)
+                                </td>
+
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DanhMuc.TenDanhMuc)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.HangSanXuat.MaHang)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Sửa", "Edit", new { id = item.MaSP }, new { @class = "btn btn-outline-dark btn-fw mdi mdi-pencil-box" }) |
+                                    @Html.ActionLink("Xem chi tiết", "Details", new { id = item.MaSP }, new { @class = "btn btn-outline-success btn-fw btn-fw mdi mdi-eye" })
+                                    |
+                                    <a href="@Url.Action("Delete", new { id = item.MaSP })" class="btn btn-outline-danger btn-fw mdi mdi-delete-forever">
+                                        Xóa
+                                    </a>
+                                </td>
+
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="pagination-container">
+                <ul class="pagination">
+                    <li>
+                        <span>Trang @(Model.PageNumber) / @Model.PageCount</span>
+                    </li>
+                    <li>
+                        @Html.PagedListPager(Model, page => Url.Action("Index", "SanPhamAdmin", new { page }))
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .pagination-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagination {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .pagination li {
+            margin: 0 5px;
+        }
+
+        .pagination a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #000000;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+
+        .pagination .active {
+            background-color: #007bff;
+            color: #000000;
+        }
+</style>
+
+
+

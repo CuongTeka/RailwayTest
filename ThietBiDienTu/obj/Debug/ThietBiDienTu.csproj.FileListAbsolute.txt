@@ -1,0 +1,516 @@
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll.config
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.pdb
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe.config
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.rsp
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe.config
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.rsp
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.AppContext.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Collections.Immutable.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Console.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Globalization.Calendars.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Http.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Sockets.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Reflection.Metadata.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.ValueTuple.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe.config
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.rsp
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe.config
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.Web.Infrastructure.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\WebGrease.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.pdb
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.pdb
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\PagedList.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.dll
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\PagedList.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.xml
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.AssemblyReference.cache
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CoreCompileInputs.cache
+E:\Đồ Án\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CopyComplete
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.pdb
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.rsp
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.rsp
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.AppContext.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Console.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Http.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Sockets.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.ValueTuple.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.rsp
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\PagedList.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\WebGrease.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\PagedList.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.pdb
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.AssemblyReference.cache
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CoreCompileInputs.cache
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CopyComplete
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\DoAnCuoi\DoAn_Website Mua Ban Trang Thiet Bi Dien Tu\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.pdb
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll.config
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.pdb
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe.config
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.rsp
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe.config
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.rsp
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Managed.Core.targets
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.AppContext.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Collections.Immutable.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Console.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Globalization.Calendars.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Http.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Sockets.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Reflection.Metadata.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.ValueTuple.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XmlDocument.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe.config
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.rsp
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe.config
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.Web.Infrastructure.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\PagedList.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\WebGrease.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\PagedList.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.pdb
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.AssemblyReference.cache
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CoreCompileInputs.cache
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CopyComplete
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.dll
+G:\My Drive\HK1_2023-2024\Website\SourceCode\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.pdb
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll.config
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.pdb
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe.config
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.rsp
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe.config
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.rsp
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.AppContext.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Console.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Http.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.ValueTuple.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe.config
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.rsp
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\PagedList.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\WebGrease.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\PagedList.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.pdb
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.AssemblyReference.cache
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CoreCompileInputs.cache
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CopyComplete
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.dll
+C:\Users\Sin\Desktop\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.pdb
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\ThietBiDienTu.pdb
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.exe.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csc.rsp
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.exe.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\csi.rsp
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.AppContext.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Console.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Http.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Net.Sockets.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.ValueTuple.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.exe.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\vbc.rsp
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\PagedList.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\WebGrease.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\EntityFramework.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\PagedList.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\PagedList.Mvc.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Helpers.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Mvc.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Optimization.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.Razor.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Deployment.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\System.Web.WebPages.Razor.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\Newtonsoft.Json.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\Antlr3.Runtime.pdb
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.AssemblyReference.cache
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CoreCompileInputs.cache
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CopyComplete
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.dll
+C:\Users\dinht\OneDrive - dinhhung.vn\Desktop\BaoCao\ThietBiDienTu\ThietBiDienTu\obj\Debug\ThietBiDienTu.pdb
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\ThietBiDienTu.dll.config
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\ThietBiDienTu.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\ThietBiDienTu.pdb
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\csc.exe
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\csc.exe.config
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\csc.rsp
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\csi.exe
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\csi.exe.config
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\csi.rsp
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.AppContext.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Console.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.IO.Compression.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Net.Http.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.ValueTuple.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\vbc.exe
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\vbc.exe.config
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\vbc.rsp
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\Antlr3.Runtime.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\EntityFramework.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\Newtonsoft.Json.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\PagedList.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\PagedList.Mvc.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Net.Http.Formatting.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Helpers.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Http.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Http.WebHost.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Mvc.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Optimization.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Razor.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.WebPages.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.WebPages.Razor.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\WebGrease.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\EntityFramework.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\PagedList.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\PagedList.Mvc.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Net.Http.Formatting.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Http.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Http.WebHost.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Helpers.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Mvc.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Optimization.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.Razor.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.WebPages.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\System.Web.WebPages.Razor.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\Newtonsoft.Json.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\Antlr3.Runtime.pdb
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.AssemblyReference.cache
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CoreCompileInputs.cache
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\obj\Debug\ThietBiDienTu.csproj.CopyComplete
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\obj\Debug\ThietBiDienTu.dll
+C:\Users\Cuong\Desktop\ThietBiDienTu-master\ThietBiDienTu-master\ThietBiDienTu\obj\Debug\ThietBiDienTu.pdb

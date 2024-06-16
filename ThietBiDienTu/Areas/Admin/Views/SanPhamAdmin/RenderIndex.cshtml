@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.SanPham>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HUIT Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/Assets/Admin/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/Assets/Admin/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <!-- End layout styles -->
+    <link href="~/Assets/Admin/css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/Assets/Admin/Images/favicon.ico" />
+</head>
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th> Các sản phẩm đã có </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="py-1">
+                        <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.HinhAnh.LinkHinhAnhChinh)" alt="image" />
+                    </td>
+                    <td> @Html.DisplayFor(modelItem => item.TenSP) </td>
+
+
+
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</body>
+</html>

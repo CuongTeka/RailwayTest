@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HUIT Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/Assets/Admin/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/Assets/Admin/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <!-- End layout styles -->
+    <link href="~/Assets/Admin/css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/Assets/Admin/Images/favicon.ico" />
+</head>
+<body>
+    <div class="container-scroller">
+        <div class="row p-0 m-0 proBanner" id="proBanner">
+            <div class="col-md-12 p-0 m-0">
+
+            </div>
+        </div>
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-cendter">
+                <a class="navbar-brand brand-logo" href="@Url.Action("AdminTrangChu", "AdminTrangChu", new { })"><img src="~/Assets/Admin/Images/logo.svg" alt="logo" /></a>
+
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                @using (Html.BeginForm("TimKiemSanPham", "AdminTrangChu"))
+                {
+                    <div class="search-field d-none d-md-block">
+                        <form class="d-flex align-items-center h-100" action="#">
+                            <div class="input-group">
+
+                                <div class="input-group-prepend bg-transparent">
+                                    <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                                </div>
+                                <input type="text" name="timkiem" class="form-control bg-transparent border-0" placeholder="Tìm kiếm">
+
+                                @*<button class="search-btn">Tìm kiếm</button>*@
+
+
+                            </div>
+                        </form>
+                    </div>
+                }
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="@Url.Action("AdminTrangChu", "AdminTrangChu", new { })" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="nav-profile-img">
+                                <img src="@Session["AnhAD"]" alt="image">
+                                <span class="availability-status online"></span>
+                            </div>
+                            <div class="nav-profile-text">
+                                <p class="mb-1 text-black">@Session["TenAD"]</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a>
+                                @Html.ActionLink("Cập nhật lại trang", "AdminTrangChu", "AdminTrangChu", new { area = "Admin" }, new { @class = "dropdown-item mdi mdi-cached me-2 text-success" })
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a>
+                                @Html.ActionLink("Đăng xuất ", "DangNhap", "DangNhap", new { area = "Admin" }, new { @class = "dropdown-item dropdown-item mdi mdi-logout me-2 text-primary" })
+
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-lg-block full-screen-link">
+                        <a class="nav-link">
+                            <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                            <i class="mdi mdi-bell-outline"></i>
+                            <span class="count-symbol bg-danger"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                            <h6 class="p-3 mb-0">Thông báo</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-success">
+                                        <i class="mdi mdi-calendar"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                    <h6 class="preview-subject font-weight-normal mb-1">Thông báo mới!</h6>
+                                    <p class="text-gray ellipsis mb-0"> Đình Tiến vừa tạo một đơn hàng!  </p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-warning">
+                                        <i class="mdi mdi-settings"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                    <h6 class="preview-subject font-weight-normal mb-1">Cài đặt</h6>
+                                    <p class="text-gray ellipsis mb-0"> Cập nhật trang chủ </p>
+                                </div>
+                            </a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item nav-logout d-none d-lg-block">
+                        <a>
+                            @Html.ActionLink(" ", "DangNhap", "DangNhap", new { area = "Admin" }, new { @class = "nav-link mdi mdi-power" })
+
+                        </a>
+
+                    </li>
+                    <li class="nav-item nav-settings d-none d-lg-block">
+                        <a class="nav-link" href="#">
+                            <i class="mdi mdi-format-line-spacing"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item nav-profile">
+                        <a href="@Url.Action("AdminTrangChu", "AdminTrangChu", new { })" class="nav-link">
+                            <div class="nav-profile-image">
+                                <img src="@Session["AnhAD"]" alt="profile">
+                                <span class="login-status online"></span>
+                                <!--change to offline or busy as needed-->
+                            </div>
+                            <div class="nav-profile-text d-flex flex-column">
+                                <span class="font-weight-bold mb-2">@Session["TenAD"]</span>
+                                <span class="text-secondary text-small">@Session["TenQuyen"]</span>
+                            </div>
+                            <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a>
+                            <span>
+                                @Html.ActionLink("Trang chủ", "AdminTrangChu", "AdminTrangChu", new { area = "Admin" }, new { @class = "nav-link menu-title" })
+
+                            </span>
+
+                        </a>
+
+                    </li>
+                    @if (Session["PhanQuyen"] != null && (int)Session["PhanQuyen"] == 2)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                                <span class="menu-title">Quản lý</span>
+                                <i class="menu-arrow"></i>
+                                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                            </a>
+                            <div class="collapse" id="ui-basic">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item">
+                                        <a>@Html.ActionLink("Quản lý sản phẩm", "Index", "SanPhamAdmin", new { area = "Admin" }, new { @class = "nav-link" })</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a>@Html.ActionLink("Quản lý nhân sự", "Index", "NhanVien", new { area = "Admin" }, new { @class = "nav-link" })</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a>@Html.ActionLink("Quản lý danh mục", "Index", "DanhMuc", new { area = "Admin" }, new { @class = "nav-link" })</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a>@Html.ActionLink("Quản lý hãng sản xuất", "Index", "HangSanXuat", new { area = "Admin" }, new { @class = "nav-link" })</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a>@Html.ActionLink("Quản lý đơn vị vận chuyển", "Index", "NhaVanChuyen", new { area = "Admin" }, new { @class = "nav-link" })</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    }
+
+
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "DanhGiaSP", new { area = "Admin" })" class="nav-link">
+
+                            <span class="menu-title">Đánh giá sản phẩm </span>
+                            <i class="mdi mdi-star-half menu-icon"></i>
+                            @if (ViewBag.SoDG != 0)
+                            {
+
+                                @ViewBag.SoDG <i class="mdi mdi-bell-outline" style="color:orangered"></i>
+                            }
+                        </a>
+                    </li>
+                    @if (Session["PhanQuyen"] != null && (int)Session["PhanQuyen"] == 2)
+                    {
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "MaGiamGiaAdmin", new { area = "Admin" })" class="nav-link">
+
+                                <span class="menu-title">Mã giảm giá</span>
+                                <i class="mdi mdi-cash menu-icon"></i>
+                            </a>
+                        </li>
+                    }
+                    <li class="nav-item">
+
+                        <a href="@Url.Action("BaoHanh", "BaoHanh", new { area = "Admin" })" class="nav-link">
+
+                            <span class="menu-title">Bảo hành</span>
+                            <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                            @if (ViewBag.SoBH != 0)
+                            {
+                                @ViewBag.SoBH <i class="mdi mdi-bell-outline" style="color:orangered"></i>
+                            }
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="@Url.Action("HoanHang", "HoanHang", new { area = "Admin" })" class="nav-link">
+
+                            <span class="menu-title">Hoàn trả</span>
+                            <i class="mdi mdi-backup-restore menu-icon"></i>
+                            @if (ViewBag.SoHT != 0)
+                            {
+                                @ViewBag.SoHT <i class="mdi mdi-bell-outline" style="color:orangered"></i>
+                            }
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#quan-ly-don-hang" aria-expanded="false" aria-controls="quan-ly-don-hang">
+                            <span class="menu-title">Quản lý đơn hàng</span>
+                            <i class="menu-arrow"></i>
+                            <i class="mdi mdi-medical-bag menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="quan-ly-don-hang">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a>@Html.ActionLink("Quản lý đơn hàng", "QuanLyDonHang", "DonHang", new { area = "Admin" }, new { @class = "nav-link" })</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#thong-ke" aria-expanded="false" aria-controls="thong-ke">
+                            <span class="menu-title">Thống kê</span>
+                            <i class="menu-arrow"></i>
+                            <i class="mdi mdi-chart-bar menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="thong-ke">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a>@Html.ActionLink("Doanh Thu", "Index", "DoanhThu", new { area = "Admin" }, new { @class = "nav-link" })</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            @RenderBody()
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/Assets/Admin/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/Assets/Admin/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/Assets/Admin/js/jquery.cookie.js" type="text/javascript"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/Assets/Admin/js/off-canvas.js"></script>
+    <script src="~/Assets/Admin/js/hoverable-collapse.js"></script>
+    <script src="~/~/Assets/Admin/Admin/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="~/Assets/Admin/js/dashboard.js"></script>
+    <script src="~/Assets/Admin/js/todolist.js"></script>
+    <!-- End custom js for this page -->
+</body>
+</html> 

@@ -1,0 +1,279 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetOrderInfoByCustomerIdAndStatus_Result>
+
+@{
+    Layout = null;
+}
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>DaHoanThanh</title>
+    </head>
+    <body>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NgayDat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TrangThai)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ThanhTien)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SDTNguoiNhan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenNguoiNhan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SoNha)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenDuong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PhuongXa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuanHuyen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TinhThanh)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LinkHinhAnhChinh)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenSP)
+                </th>
+
+                <th></th>
+            </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThanhTien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SDTNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoNha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenDuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhuongXa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuanHuyen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TinhThanh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSP)
+                </td>
+                <td>
+                    @Html.ActionLink("Yêu cầu bảo hành", "Edit", new { id=item.MaDDH }) |
+                    @Html.ActionLink("Xem đơn đặt hàng", "CTDaHoanThanh", new { idDDH=item.MaDDH }) |
+                    @Html.ActionLink("Hoàn trả", "Delete", new { id=item.MaDDH })
+                </td>
+            </tr>
+        }
+
+        </table>
+    </body>
+    </html>*@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DaHoanThanh</title>
+    <style>
+        .order-container {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+        }
+
+            .order-container img {
+                max-width: 150px;
+                height: auto;
+                margin-right: 20px;
+                border-radius: 5px;
+            }
+
+        .order-actions {
+            margin-top: 80px;
+            justify-content: space-between;
+        }
+
+        .action-link {
+            padding: 10px;
+            margin-right: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center mb-4">Đã giao hàng</h2>
+    <hr />
+    @foreach (var item in Model)
+    {
+        <div class="order-container">
+            <img src="~/Assets/img/@item.LinkHinhAnhChinh" alt="Product Image" />
+            <div style="flex-grow: 1;">
+                <h4 style="color: #ff6a00; margin-bottom :10px;">
+                    @Html.DisplayFor(modelItem => item.TenSP)
+                </h4>
+                <div>
+                    <span style="font-weight: bold;">Ngày Đặt:</span>
+                    <span>@Html.DisplayFor(modelItem => item.NgayDat)</span>
+                </div>
+                <div>
+                    <span style="font-weight: bold;">Trạng Thái:</span>
+                    @if (item.TrangThai == 1)
+                    {
+                        <span style="color: green; font-weight: bold;">Hoàn tất</span>
+                    }
+                    else if (item.TrangThai == 2)
+                    {
+                        <span style="color: orange; font-weight: bold;">Chờ xác nhận</span>
+                    }
+                    else if (item.TrangThai == 3)
+                    {
+                        <span style="color: #DC143C; font-weight: bold;">Giao thành công</span>
+                    }
+                </div>
+                <div>
+                    <span style="color: #d31d14; font-size: 18px;">Thành Tiền: </span>
+                    <span style="font-weight: bold; font-size: 18px;">@String.Format("{0:0,0}", item.ThanhTien)đ</span>
+                </div>
+            </div>
+            <div class="order-actions">
+                <a href="#" class="action-link btn-primary" onclick="showForm('@item.MaDDH')">Yêu cầu hoàn trả</a>
+
+                <div id="hoanTraForm_@item.MaDDH" style="display:none">
+                    @using (Html.BeginForm("YeuCauHoanTra", "HoanTraDonHang", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        <input type="text" class="user" name="MaDDH" placeholder="Mã đơn hàng" value="@item.MaDDH" readonly>
+                        <input type="text" name="Lydo" class="lock" placeholder="Lý do">
+                        <input type="submit" name="YeuCauHoanTra" value="Hoàn đơn">
+                        <a href="#" onclick="hideForm('@item.MaDDH')" class="action-link btn-danger">X Đóng</a>
+                        <br /> <br /><br />
+                    }
+                </div>
+
+                <a href="@Url.Action("CTDaHoanThanh", new { idDDH = item.MaDDH })" class="action-link btn-info">Xem đơn đặt hàng</a>
+            </div>
+
+            <script>
+                function showForm(maDDH) {
+                    document.getElementById("hoanTraForm_" + maDDH).style.display = "block";
+                }
+
+                function hideForm(maDDH) {
+                    document.getElementById("hoanTraForm_" + maDDH).style.display = "none";
+                }
+            </script>
+
+        </div>
+    }
+</body>
+</html>
+
+@*<div class="content-wrapper">
+        <div class="content-wrapper">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Tình trạng đơn hàng</h4>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Mã đơn</th>
+                                    <th> Tên sản phẩm</th>
+                                    <th> Khách hàng </th>
+
+                                    <th> Ngày đặt </th>
+                                    <th> Đơn vị vận chuyển </th>
+                                    <th> Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var groupedOrders = Model.GroupBy(item => item.MaDDH).ToList();
+                                }
+
+                                @foreach (var group in groupedOrders)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => group.Key)
+                                        </td>
+                                        <td>
+                                            @foreach (var item in group)
+                                            {
+                                                <img src="@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)" class="me-2" alt="image"> @Html.DisplayFor(modelItem => item.TenSP)<br />
+                                            }
+                                        </td>
+                                        <td> @Html.DisplayFor(modelItem => group.First().TenNguoiNhan)</td>
+
+                                        <td> @Html.DisplayFor(modelItem => group.First().NgayDat) </td>
+                                        <td> @Html.DisplayFor(modelItem => group.First().TenNVC)</td>
+                                        <td>
+                                            <a href="@Url.Action("XacNhanDH", new { id = group.First().MaDDH})" class="mdi mdi-check-circle">
+                                                Xác nhận
+                                            </a>
+                                            <a href="@Url.Action("XemChiTietDH", new { idDDH = group.First().MaDDH })" class="mdi mdi-eye">
+                                                Xem đơn
+                                            </a>
+                                            <a href="@Url.Action("HuyDH", new { MaDDH = group.First().MaDDH })" class="mdi mdi-delete-forever">
+                                                Hủy
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>*@

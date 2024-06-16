@@ -1,0 +1,76 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.DanhMuc
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>Edit</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>DanhMuc</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.MaDanhMuc)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TenDanhMuc, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TenDanhMuc)
+                    @Html.ValidationMessageFor(model => model.TenDanhMuc)
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+<div class="content-wrapper">
+    <div class="form-group">
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Chỉnh sửa danh mục</h4>
+        </div>
+
+        <div class="card-body">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(model => model.MaDanhMuc)
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TenDanhMuc, "Tên danh mục", new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.TenDanhMuc, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TenDanhMuc, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Lưu" class="btn btn-inverse-info btn-fw mdi mdi-content-save" />
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>

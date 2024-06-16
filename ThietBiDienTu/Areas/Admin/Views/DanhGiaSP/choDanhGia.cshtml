@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetDanhGia3_Result>
+
+@{
+    Layout = null;
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Sản phẩm </th>
+            <th> Tên sản phẩm </th>
+            <th> Tên khách hàng </th>
+            <th> Nội dung đánh giá</th>
+            <th> Đánh giá </th>
+            <th> Ngày đánh giá </th>
+            <th>Cập nhật</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="py-1">
+                    <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)" alt="image" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoiDungDanhGia)
+                </td>
+                <td class="star-rating" data-rating="@Html.DisplayFor(modelItem => item.DanhGia)"></td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDanhGia)
+                </td>
+                <td>
+                    <a href="@Url.Action("AnDanhGia", new { id = item.MaDanhGia })" class=" btn btn-outline-primary mdi mdi-eye-off mdi-database-plus">
+                        Ẩn
+                    </a>
+
+                    <a href="@Url.Action("HienThi", new { id = item.MaDanhGia })" class="btn btn-outline-success btn-fw btn-fw mdi mdi-eye">
+                        Hiển thị
+                    </a>
+                </td>
+
+
+
+
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>

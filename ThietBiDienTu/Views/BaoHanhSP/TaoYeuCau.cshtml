@@ -1,0 +1,43 @@
+﻿
+@model ThietBiDienTu.Areas.Admin.Models.TaoYeuCauViewModel
+
+@{
+    ViewBag.Title = "Yêu Cầu Bảo Hành";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>Yêu Cầu Bảo Hành</h2>
+
+    @using (Html.BeginForm("TaoYeuCau", "BaoHanhSP", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.MaBH)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LyDo, htmlAttributes: new { @class = "control-label" })
+            @Html.TextAreaFor(model => model.LyDo, new { @class = "form-control", rows = 4 })
+            @Html.ValidationMessageFor(model => model.LyDo, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="submit" class="btn btn-primary">Gửi Yêu Cầu</button>
+    }*@
+<br />
+<h2 class="text-center">Yêu Cầu Bảo Hành</h2>
+
+<div style="max-width: 600px; margin: 20px auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    @using (Html.BeginForm("TaoYeuCau", "BaoHanhSP", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.MaBH)
+
+        <div style="margin-bottom: 20px;">
+            @Html.LabelFor(model => model.LyDo, "Lý do", htmlAttributes: new { @style = "font-weight: bold; color: #495057;" })
+            @Html.TextAreaFor(model => model.LyDo, new { @style = "width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #ced4da; border-radius: 4px;" })
+            @Html.ValidationMessageFor(model => model.LyDo, "", new { @style = "color: #dc3545;" })
+        </div>
+
+        <button type="submit" style="background-color: #007bff; color: #fff; border: 1px solid #007bff; border-radius: 4px; padding: 10px 15px; cursor: pointer;">Gửi Yêu Cầu</button>
+    }
+</div>

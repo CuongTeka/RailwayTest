@@ -1,0 +1,152 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetOrderInfoByCustomerIdAndOrderIDAndStatus_Result>
+@{
+    Layout = null;
+}
+
+@{
+    decimal total = 0;
+}
+@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Chi tiết đơn hàng</title>
+        <style>
+            .product-container {
+                border: 1px solid #ddd;
+                padding: 15px;
+                margin: 10px;
+                display: flex;
+                align-items: center;
+            }
+
+            .product-image {
+                max-width: 50px; /* Adjust the max-width as needed */
+                max-height: 50px; /* Adjust the max-height as needed */
+                margin-right: 10px;
+            }
+
+            .product-details {
+                flex-grow: 1;
+            }
+        </style>
+    </head>
+    <div>
+        <h2>Chi tiết đơn hàng</h2>
+
+        <body>
+            @foreach (var item in Model)
+            {
+                <div class="product-container">
+                    <div class="product-image">
+                        @if (!string.IsNullOrEmpty(item.LinkHinhAnhChinh))
+                        {
+                            <img src="@item.LinkHinhAnhChinh" alt="Product Image" class="product-image" />
+                        }
+                        else
+                        {
+                        <!-- Provide a default image or handle the case when the image is not available -->
+                            <img src="default-image.jpg" alt="Default Image" class="product-image" />
+                        }
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Tên sản phẩm:</strong> @Html.DisplayFor(model => item.TenSP)</p>
+                        <p><strong>Số lượng:</strong> @Html.DisplayFor(model => item.SoLuong)</p>
+
+                        <!-- Add more details as needed -->
+                    </div>
+                </div>
+
+            }
+        </body>
+        </div>
+    </html>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết đơn hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .product-container {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            max-width: 80px;
+            max-height: 80px;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
+
+        .product-details {
+            flex-grow: 1;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .total-container {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Chi tiết đơn hàng</h2>
+
+        @foreach (var item in Model)
+        {
+            total += (decimal)item.ThanhTien;
+            <div class="product-container">
+                <div class="product-image">
+                    @if (!string.IsNullOrEmpty(item.LinkHinhAnhChinh))
+                    {
+                        <img src="~/Assets/img/@item.LinkHinhAnhChinh" alt="Product Image" class="product-image" />
+                    }
+
+                </div>
+                <div class="product-details">
+                    <p><strong>Tên sản phẩm:</strong> @Html.DisplayFor(model => item.TenSP)</p>
+                    <p><strong>Số lượng:</strong> @Html.DisplayFor(model => item.SoLuong)</p>
+                    <p><strong>Giá:</strong> @String.Format("{0:0,0}", item.ThanhTienSP) đ</p>
+
+
+
+                </div>
+            </div>
+        }
+        <div class="total-container">
+            <h2 style="color:#ff0000">Tổng tiền: @String.Format("{0:0,0}", @total)  ₫</h2>
+        </div>
+        @*<div class="total-container">
+                <h3>Tổng cộng: [Add logic to calculate total amount]</h3>
+            </div>*@
+    </div>
+</body>
+</html>

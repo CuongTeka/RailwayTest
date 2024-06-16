@@ -1,0 +1,91 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.CTDiaChi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CTDiaChi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SoNha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoNha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhuongXa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhuongXa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuanHuyen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuanHuyen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhThanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhThanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MacDinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MacDinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNguoiNhan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNguoiNhan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDTNguoiNhan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDTNguoiNhan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi.MaDiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi.MaDiaChi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaCTDiaChi }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

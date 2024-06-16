@@ -1,0 +1,70 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.NhaVanChuyen
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="form-group">
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </div>
+
+    <div class="card">
+        <div class=" card-header" style="background-color: #C8E2B1; ">
+            <h4 class="card-title">Chỉnh sửa nhà vận chuyển @Model.TenNVC</h4>
+        </div>
+
+        <div class="card-body">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true)
+                @Html.HiddenFor(model => model.MaNVC)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TenNVC, "Tên nhà vận chuyển :", new { @class = "control-label col-md-6" })
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(model => model.TenNVC, new { @class = "form-control" })
+                        @*@Html.EditorFor(model => model.TenNCC)*@
+                        @Html.ValidationMessageFor(model => model.TenNVC)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ChiPhi, "Chi phí :", new { @class = "control-label col-md-6" })
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(model => model.ChiPhi, new { @class = "form-control" })
+
+                        @Html.ValidationMessageFor(model => model.ChiPhi)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DiaChiNVC, "Thông tin liên hệ :", new { @class = "control-label col-md-6" })
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(model => model.DiaChiNVC, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.DiaChiNVC)
+                    </div>
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(model => model.SDTNVC, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.SDTNVC)
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Lưu" class="btn btn-inverse-info btn-fw mdi mdi-content-save" />
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

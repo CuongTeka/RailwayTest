@@ -1,0 +1,188 @@
+﻿@model PagedList.IPagedList<ThietBiDienTu.Areas.Admin.Models.SanPham>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "SanPhamTheoLoai";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<html>
+<body>
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- ASIDE -->
+                @Html.Action("DanhMuc", "SanPham")
+                <!-- /ASIDE -->
+                <!-- STORE -->
+                <div id="store" class="col-md-9">
+                    <!-- store top filter -->
+                    <div class="store-filter clearfix">
+                        <div class="store-sort">
+                            <label>
+                                Sắp xếp giá:
+                                <select class="input-select">
+                                    <option value="0">Tăng dần</option>
+                                    <option value="1">Giảm dần</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Số lượng:
+                                <select class="input-select">
+                                    <option value="0">20</option>
+                                    <option value="1">50</option>
+                                </select>
+                            </label>
+                        </div>
+                        <ul class="store-grid">
+                            <li class="active"><i class="fa fa-th"></i></li>
+                            <li><a href="#"><i class="fa fa-th-list"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /store top filter -->
+
+                    <div class="row">
+                        <!-- store products -->
+                        @foreach (var item in Model)
+                        {
+
+
+                            <div class="col-md-4 col-xs-6 mb-5">
+                                <a href="@Url.Action("ChiTietSanPham", "SanPham", new { id = item.MaSP })" class="product-link">
+                                    <div class="product">
+                                        <div class="product-img">
+                                            <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.HinhAnh.LinkHinhAnhChinh)" alt="">
+                                            <div class="product-label">
+                                                @if (item.UuDai > 0)
+                                                {
+                                                    <span class="sale">-@Html.DisplayFor(modelItem => item.UuDai)%</span>
+                                                }
+                                                @if (item.NgayTao.HasValue && (DateTime.Now - item.NgayTao.Value).TotalDays <= 7)
+                                                {
+                                                    <span class="new">NEW</span>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-category">@Html.DisplayFor(modelItem => item.DanhMuc.TenDanhMuc)</p>
+                                            <h3 class="product-name"><a href="@Url.Action("ChiTietSanPham", "SanPham", new { id = item.MaSP })">@Html.DisplayFor(modelItem => item.TenSP)</a></h3>
+                                            <br>
+                                            @if (item.UuDai > 0)
+                                            {
+                                                <h4 class="product-price">@String.Format("{0:0,0}", item.GiaTien) đ <del class="product-old-price">@String.Format("{0:0,0}", item.GiaGoc) đ</del></h4>
+                                            }
+                                            else
+                                            {
+                                                <h4 class="product-price">@String.Format("{0:0,0}", item.GiaTien) đ</h4>
+                                            }
+                                            <div class="product-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <button class="add-to-cart-btn" onclick="CheckAndAddToCart(@Html.DisplayFor(modelItem => item.MaSP))">
+                                                    <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+                                                </button>
+                                            </div>
+
+                                        </div>
+
+                                        <script>
+                                            function CheckAndAddToCart(productId) {
+                                                // Kiểm tra nếu tài khoản là null
+                                                if (@(Session["TaiKhoan"] == null ? "true" : "false")) {
+                                                    // Hiển thị thông báo và ngăn chặn thêm vào giỏ hàng
+                                                    alert("Bạn cần đăng nhập để mua hàng.");
+                                                } else {
+                                                    // Nếu tài khoản không phải null, thực hiện thêm vào giỏ hàng
+                                                    AddToCart(productId);
+                                                }
+                                            }
+
+                                            function AddToCart(productId) {
+                                                $.ajax({
+                                                    url: "/SanPham/ThemSPVaoGio",
+                                                    method: "POST",
+                                                    data: { productId: productId, sl:1 }
+                                                })
+                                                .done(function (msg) {
+                                                    alert("Thêm thành công");
+                                                    location.reload();
+                                                });
+                                            }
+                                        </script>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                        }
+
+                        <!-- /product -->
+                    </div>
+                    <!-- /store products -->
+                    <!-- store bottom filter -->
+                    <div class="store-filter clearfix">
+                        <span class="store-qty">Hiển thị 9-100 sản phẩm</span>
+                        <ul @*class="store-pagination"*@>
+                            @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                            @Html.PagedListPager(Model, page => Url.Action("SanPhamTheoLoai", new { page }))
+
+                            @*<li class="active">1</li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>*@
+                        </ul>
+                    </div>
+                    <!-- /store bottom filter -->
+                </div>
+                <!-- /STORE -->
+
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+
+</body>
+</html>
+
+<!--TrangChu-->
+<!-- Google font -->
+<!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">-->
+
+<!-- Bootstrap -->
+<!--<link type="text/css" rel="stylesheet" href="~/Assets/User/css/bootstrap.min.css" />-->
+
+<!-- Slick -->
+<!--<link type="text/css" rel="stylesheet" href="~/Assets/User/css/slick.css" />
+<link type="text/css" rel="stylesheet" href="~/Assets/User/css/slick-theme.css" />-->
+
+<!-- nouislider -->
+<!--<link type="text/css" rel="stylesheet" href="~/Assets/User/css/nouislider.min.css" />-->
+
+<!-- Font Awesome Icon -->
+<!--<link rel="stylesheet" href="~/Assets/User/css/font-awesome.min.css">-->
+
+<!-- Custom stlylesheet -->
+<!--<link type="text/css" rel="stylesheet" href="~/Assets/User/css/style.css" />-->
+
+<!-- jQuery Plugins -->
+<!--<script src="~/Assets/User/js/jquery.min.js"></script>
+<script src="~/Assets/User/js/bootstrap.min.js"></script>
+<script src="~/Assets/User/js/slick.min.js"></script>
+<script src="~/Assets/User/js/nouislider.min.js"></script>
+<script src="~/Assets/User/js/jquery.zoom.min.js"></script>
+<script src="~/Assets/User/js/main.js"></script>-->
+
+

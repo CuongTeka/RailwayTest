@@ -1,0 +1,66 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.HangSanXuat
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="form-group">
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </div>
+
+    <div class="card">
+        <div class=" card-header" style="background-color: #C8E2B1; ">
+            <h4 class="card-title">Chỉnh sửa hãng sản xuất</h4>
+        </div>
+
+        <div class="card-body">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(model => model.MaHang)
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TenHang, "Tên hãng sản xuất :", new { @class = "control-label col-md-6" })
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(model => model.TenHang, new { @class = "form-control" })
+                            @*@Html.EditorFor(model => model.TenNCC)*@
+                            @Html.ValidationMessageFor(model => model.TenHang)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TTLienHe, "Thông tin liên hệ :", new { @class = "control-label col-md-6" })
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(model => model.TTLienHe, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TTLienHe)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MoTa, "Mô tả :", new { @class = "control-label col-md-6" })
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(model => model.MoTa, new { @class = "form-control" })
+
+                            @Html.ValidationMessageFor(model => model.MoTa)
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Lưu" class="btn btn-inverse-info btn-fw mdi mdi-content-save" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

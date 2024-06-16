@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.sp_HienThiYeuCauBHTheoTrangThai_Result>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>YeuCauBH</title>
+</head>
+<body>
+    @*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+    <table class="table">
+        <tr>
+            <th>
+               Ngày yêu cầu
+            </th>
+            <th>
+                Lý do bảo hành
+            </th>
+            <th>
+               Trạng thái đơn hàng
+            </th>
+
+            <th>
+                Tên khách hàng
+            </th>
+            <th>
+                Tên sản phẩm
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayYeuCau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LyDo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenKhachHang)
+                </td>
+                
+                <td>
+                    <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)" alt="image" />
+                    @Html.DisplayFor(modelItem => item.TenSP)
+                </td>
+                <td>
+                    <a href="@Url.Action("TuChoiBH", new { MaPBH = item.MaPhieuBH })" class="btn btn-outline-danger btn-fw mdi mdi-delete-forever">
+                        Không bảo hành
+                    </a>
+
+                    <a href="@Url.Action("ChapNhanBH", new { MaPBH = item.MaPhieuBH })" class="btn btn-outline-success btn-fw btn-fw mdi mdi-eye">
+                        Bảo hành
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,147 @@
+﻿@using ThietBiDienTu.Areas.Admin.Models
+@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.SanPham>
+
+@{
+    Layout = null;
+}
+
+<!-- Menu -->
+<div class="header__nav">
+    <ul class="header__nav-list">
+        <li class="header__nav-item index">
+            <a href="@Url.Action("TrangChu", "TrangChu", new { })" class="header__nav-link">Trang chủ</a>
+        </li>
+        <li class="header__nav-item">
+            <a href="@Url.Action("SanPham", "SanPham", new { })" class="header__nav-link">Sản Phẩm</a>
+        </li>
+        <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Danh Mục</a>
+            <div class="sub-nav-wrap grid wide">
+                @foreach (var groupItem in Model.GroupBy(n => n.MaDanhMuc))
+                {
+                    if (groupItem.Key != null)
+                    {
+                        ThietBiDienTuEntities1 db = new ThietBiDienTuEntities1();
+                        var danhMucInfo = db.DanhMucs.FirstOrDefault(dm => dm.MaDanhMuc == groupItem.Key);
+
+                        if (danhMucInfo != null)
+                        {
+                            <ul class="sub-nav">
+                                <p class="sub-nav__link heading" href="#">@danhMucInfo.TenDanhMuc</p>
+                                @foreach (var item in groupItem.GroupBy(n => n.HangSanXuat))
+                                {
+                                    if (item.Key != null)
+                                    {
+                                        <li class="sub-nav__item">
+                                            <a href="@Url.Action("SanPhamTheoHSX", "TrangChu", new {@mahang=item.Key.MaHang, @madanhmuc=danhMucInfo.MaDanhMuc })" class="sub-nav__link">@item.Key.TenHang</a>
+                                        </li>
+                                    }
+                                }
+
+
+                            </ul>
+                        }
+                    }
+                }
+                    @*<ul class="sub-nav">
+                <li class="sub-nav__item">
+                    <a href="" class="sub-nav__link heading">Laptop</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Mac</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Lenovo</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Dell</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Asus</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Acer</a>
+                </li>
+            </ul>
+            <ul class="sub-nav">
+                <li class="sub-nav__item">
+                    <a href="" class="sub-nav__link heading">Màn hình</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Màn hình đồ họa</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Màn hình Gaming</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Màn hình văn phòng</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Màn hình di động</a>
+                </li>
+            </ul>
+            <ul class="sub-nav">
+                <li class="sub-nav__item">
+                    <a href="" class="sub-nav__link heading">Âm thanh</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Loa</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Tai nghe</a>
+                </li>
+            </ul>
+            <ul class="sub-nav">
+                <li class="sub-nav__item">
+                    <a href="" class="sub-nav__link heading">Đồng hồ</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Apple</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Samsung</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Garmin</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Xiaomi</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Amazfit</a>
+                </li>
+            </ul>
+            <ul class="sub-nav">
+                <li class="sub-nav__item">
+                    <a href="" class="sub-nav__link heading">Phụ Kiện</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Phụ kiện di động</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Phụ kiện laptop</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Thiết bị mạng</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Thiết bị âm thanh</a>
+                </li>
+                <li class="sub-nav__item">
+                    <a href="listProduct.html" class="sub-nav__link">Phụ kiện khác</a>
+                </li>
+            </ul>*@
+
+                </div>
+        </li>
+        <li class="header__nav-item">
+            <a href="@Url.Action("GioiThieu", "TrangChu", new { })" class="header__nav-link">Giới thiệu</a>
+
+
+        </li>
+        <li class="header__nav-item">
+            <a href="@Url.Action("LienHe", "TrangChu", new { })" class="header__nav-link">Liên Hệ</a>
+        </li>
+    </ul>
+</div>
+<!--/Menu-->

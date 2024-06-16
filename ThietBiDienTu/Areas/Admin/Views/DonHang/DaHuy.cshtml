@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.HuyHang>
+@{
+    Layout = null;
+}
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Mã đơn</th>
+                
+
+                <th> Ngày hủy </th>
+                <th> Lý do </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var groupedOrders = Model.GroupBy(item => item.MaDDH).ToList();
+            }
+
+            @foreach (var group in groupedOrders)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => group.First().MaDDH)
+                    </td>
+                    
+                    
+
+                    <td> @Html.DisplayFor(modelItem => group.First().NgayHuy) </td>
+                    <td> @Html.DisplayFor(modelItem => group.First().LyDonHuy)</td>
+                    <td>
+                        <a href="@Url.Action("XemChiTietDH", new { idDDH = group.First().MaDDH })" class="btn btn-outline-success btn-fw btn-fw mdi mdi-eye">
+                            Xem đơn
+                        </a>
+                    </td>
+                    
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div>

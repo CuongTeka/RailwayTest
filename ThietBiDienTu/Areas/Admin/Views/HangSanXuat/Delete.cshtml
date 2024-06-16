@@ -1,0 +1,46 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.HangSanXuat
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="card-header bg-danger text-white">
+        <h4>Bạn có chắc chắn muốn xóa không ?</h4>
+    </div>
+    <br />
+    <p>
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </p>
+
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4 class="card-title">Xóa hãng sản xuất</h4>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label class="col-sm-3 col-md-6">Tên hãng:</label>
+                <div class="">
+                    <p class="form-control">@Html.DisplayFor(model => model.TenHang)</p>
+                </div>
+                <label class="col-sm-3 col-md-6">Mô tả:</label>
+                <div class="">
+                    <p class="form-control">@Html.DisplayFor(model => model.MoTa)</p>
+                </div>
+                <label class="col-sm-3 col-md-6">Thông tin liên hệ:</label>
+                <div class="">
+                    <p class="form-control">@Html.DisplayFor(model => model.TTLienHe)</p>
+                </div>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="text-center mt-4">
+                        <input type="submit" value="Xóa" class="btn btn-outline-danger btn-fw mdi mdi-delete-forever " onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>

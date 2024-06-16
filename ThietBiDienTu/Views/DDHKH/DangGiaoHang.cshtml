@@ -1,0 +1,267 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.DDH>
+
+@{
+    Layout = null;
+}
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>DangGiaoHang</title>
+    </head>
+    <body>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NgayDat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TrangThai)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ThanhTien)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SDTNguoiNhan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenNguoiNhan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SoNha)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenDuong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PhuongXa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuanHuyen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TinhThanh)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GhiChu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KhachHang.TenKH)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaGiamGia1.TenMGG)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NhaVanChuyen.TenNVC)
+                </th>
+                <th></th>
+            </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThanhTien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SDTNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoNha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenDuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhuongXa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuanHuyen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TinhThanh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GhiChu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KhachHang.TenKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaGiamGia1.TenMGG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NhaVanChuyen.TenNVC)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Xem đơn đặt hàng", "CTDangGiaoHang", new { idDDH=item.MaDDH })
+
+                </td>
+            </tr>
+        }
+
+        </table>
+    </body>
+    </html>*@
+
+@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>DangGiaoHang</title>
+        <style>
+
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+            .action-link {
+                text-decoration: none;
+                color: #007bff;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="margin: 20px;">
+
+            <table>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.NgayDat)</th>
+                    <th>@Html.DisplayNameFor(model => model.TrangThai)</th>
+                    <th>@Html.DisplayNameFor(model => model.ThanhTien)</th>
+                    <th>@Html.DisplayNameFor(model => model.SDTNguoiNhan)</th>
+                    <th>@Html.DisplayNameFor(model => model.TenNguoiNhan)</th>
+                    <th>@Html.DisplayNameFor(model => model.SoNha)</th>
+                    <th>@Html.DisplayNameFor(model => model.TenDuong)</th>
+                    <th>@Html.DisplayNameFor(model => model.PhuongXa)</th>
+                    <th>@Html.DisplayNameFor(model => model.QuanHuyen)</th>
+                    <th>@Html.DisplayNameFor(model => model.TinhThanh)</th>
+                    <th>@Html.DisplayNameFor(model => model.GhiChu)</th>
+                    <th>@Html.DisplayNameFor(model => model.KhachHang.TenKH)</th>
+                    <th>@Html.DisplayNameFor(model => model.MaGiamGia1.TenMGG)</th>
+                    <th>@Html.DisplayNameFor(model => model.NhaVanChuyen.TenNVC)</th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.NgayDat)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TrangThai)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ThanhTien)</td>
+                        <td>@Html.DisplayFor(modelItem => item.SDTNguoiNhan)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TenNguoiNhan)</td>
+                        <td>@Html.DisplayFor(modelItem => item.SoNha)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TenDuong)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PhuongXa)</td>
+                        <td>@Html.DisplayFor(modelItem => item.QuanHuyen)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TinhThanh)</td>
+                        <td>@Html.DisplayFor(modelItem => item.GhiChu)</td>
+                        <td>@Html.DisplayFor(modelItem => item.KhachHang.TenKH)</td>
+                        <td>@Html.DisplayFor(modelItem => item.MaGiamGia1.TenMGG)</td>
+                        <td>@Html.DisplayFor(modelItem => item.NhaVanChuyen.TenNVC)</td>
+                        <td>
+                            @Html.ActionLink("Xem đơn đặt hàng", "CTDangGiaoHang", new { idDDH = item.MaDDH }, new { @class = "action-link" })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </body>
+    </html>*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DangGiaoHang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+    </style>
+
+</head>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Đang giao hàng</h2>
+    <hr />
+
+    <body>
+        @foreach (var item in Model)
+        {
+            <div class="card" style="margin: 20px;">
+                <p style=" font-weight: bold;">Ngày đặt: <span style="margin:10px;">@Html.DisplayFor(modelItem => item.NgayDat)</span></p>
+
+                <p style=" font-weight: bold;">
+                    Trạng thái đơn hàng:
+                    @if (item.TrangThai == 1)
+                    {
+                        <span style="color: green; font-weight: bold;">Chờ xác nhận</span>
+                    }
+                    else if (item.TrangThai == 2)
+                    {
+                        <span style="color: orange; font-weight: bold;">Đang xử lý</span>
+                    }
+                    else if (item.TrangThai == 3)
+                    {
+                        <span style="color: blue; font-weight: bold;">Một trạng thái khác</span>
+                    }
+                </p>
+
+                <p style=" font-weight: bold;">Tổng tiền: <span style="color: #ff0000; margin: 10px;"> @String.Format("{0:0,0}", item.ThanhTien) đ</span></p>
+                <p style=" font-weight: bold;">Tên khách hàng:<span style="margin: 10px;">@Html.DisplayFor(modelItem => item.KhachHang.TenKH)</span></p>
+                <p style=" font-weight: bold;">Đơn vị vận chuyển:<span style="margin:10px;">@Html.DisplayFor(modelItem => item.NhaVanChuyen.TenNVC)</span></p>
+                <a href="@Url.Action("CTDangGiaoHang", new { idDDH = item.MaDDH })" class="action-link">
+                    <div style="background-color: #007bff; color: #fff; padding: 10px; border-radius: 5px; text-align: center; cursor: pointer;">
+                        Xem đơn đặt hàng
+                    </div>
+                </a>
+            </div>
+        }
+
+    </body>
+</div>
+</html>

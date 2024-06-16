@@ -1,0 +1,76 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.NhanVien
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+    <div class="form-group">
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Thêm mới nhân sự</h4>
+        </div>
+
+        <div class="card-body">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+
+                    @Html.ValidationSummary(true)
+
+                    <div class="form-group">
+                        <h5>Tên tài khoản</h5>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TenTaiKhoanAdmin)
+                            @Html.ValidationMessageFor(model => model.TenTaiKhoanAdmin)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h5>Mật khẩu</h5>                        
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.MatKhauAdmin)
+                            @Html.ValidationMessageFor(model => model.MatKhauAdmin)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <h5>Họ tên</h5>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.HoTenAdmin)
+                            @Html.ValidationMessageFor(model => model.HoTenAdmin)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h5>Hình ảnh</h5>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.AnhAdmin)
+                            @Html.ValidationMessageFor(model => model.AnhAdmin)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h5>Tên quyền</h5>
+                        <div class="col-md-10">
+                            @Html.DropDownList("MaQuyen", String.Empty)
+                            @Html.ValidationMessageFor(model => model.MaQuyen)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Thêm mới" class="btn btn-outline-primary btn-fw mdi mdi-database-plus" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

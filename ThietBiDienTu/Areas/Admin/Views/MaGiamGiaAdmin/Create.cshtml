@@ -1,0 +1,134 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.MaGiamGia
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+    <div class="form-group">
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Thêm mới mã giảm giá</h4>
+        </div>
+        <div class="card-body">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>MaGiamGia</h4>
+                <hr />
+                @Html.ValidationSummary(true)
+
+                <div class="form-group">
+                    <h5>Mã giảm giá</h5>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.MaGiamGia1)
+                        @Html.ValidationMessageFor(model => model.MaGiamGia1)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h5>Tên giảm giá</h5>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TenMGG)
+                        @Html.ValidationMessageFor(model => model.TenMGG)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h5>Số lượng</h5>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SLDaSuDung)
+                        @Html.ValidationMessageFor(model => model.SLDaSuDung)
+                    </div>
+                </div>
+                @*<div class="form-group">
+            @Html.Label("Ngày bắt đầu:", new { @class = "col-md-10 control-label" })
+            <div class="col-md-10">
+                <div class="input-group date" data-provide="datepicker">
+                    @Html.TextBox("ngaybd", null, new { @class = "form-control", type = "text", data_date_format = "dd/mm/yyyy" })
+                    <div class="col-md-10">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+
+                </div>
+                @Html.ValidationMessage("ngaybd")
+            </div>
+
+            @Html.Label("Ngày kết thúc:", new { @class = "col-md-10 control-label" })
+            <div class="col-md-10">
+                <div class="input-group date" data-provide="datepicker">
+                    @Html.TextBox("ngaykt", null, new { @class = "form-control", type = "text", data_date_format = "dd/mm/yyyy" })
+                    <div class="col-md-10">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                </div>
+                @Html.ValidationMessage("ngaykt")
+            </div>
+        </div>*@
+                <div class="form-group">
+                    <h5>Ngày bắt đầu giảm giá</h5>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NgayBatDau)
+                        @Html.ValidationMessageFor(model => model.NgayBatDau)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h5>Ngày kết thúc giảm giá</h5>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NgayKetThuc)
+                        @Html.ValidationMessageFor(model => model.NgayKetThuc)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h5>Tỷ lệ giảm giá</h5>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TiLeGiam)
+                        @Html.ValidationMessageFor(model => model.TiLeGiam)
+                    </div>
+                </div>
+                <div style="color:orangered">
+                    @Html.ValidationSummary()
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Thêm mới" class="btn btn-outline-primary btn-fw mdi mdi-database-plus" />
+                    </div>
+                </div>
+            </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+<!-- Thêm thư viện Bootstrap và Bootstrap Datepicker -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+<!-- Thêm thư viện jQuery và Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Thêm thư viện Bootstrap Datepicker JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<!-- Kích hoạt Datepicker -->
+<script>
+    $(document).ready(function () {
+        $('.date').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+    });
+</script>

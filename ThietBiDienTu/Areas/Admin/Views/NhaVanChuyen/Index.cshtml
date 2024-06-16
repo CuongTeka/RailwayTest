@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.NhaVanChuyen>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Quản lý nhà vận chuyển</h4>
+            <p class="card-description">
+                @Html.ActionLink("Thêm mới nhà vận chuyển", "Create", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-database-plus" })
+            </p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Tên nhà vận chuyển</th>
+                        <th>Chi phí</th>
+                        <th>Thông tin liên hệ</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.TenNVC)</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ChiPhi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SDTNVC)
+                                @Html.DisplayFor(modelItem => item.DiaChiNVC)
+                            </td>
+
+                            <td>
+                                @Html.ActionLink("Sửa", "Edit", new { id = item.MaNVC }, new { @class = "btn btn-outline-dark btn-fw mdi mdi-pencil-box" }) |
+                                @Html.ActionLink("Xem chi tiết", "Details", new { id = item.MaNVC }, new { @class = "btn btn-outline-success btn-fw btn-fw mdi mdi-eye" }) |
+
+                                <a href="@Url.Action("Delete", new { id = item.MaNVC })" class="btn btn-outline-danger btn-fw mdi mdi-delete-forever">
+                                    Xóa
+                                </a>
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+

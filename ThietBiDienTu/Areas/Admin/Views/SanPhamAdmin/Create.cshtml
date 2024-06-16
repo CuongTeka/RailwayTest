@@ -1,0 +1,200 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.SanPhamViewModels
+
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Create", "SanPhamAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Thêm mới sản phẩm</h4>
+                        <form class="form-sample" method="POST" action="URL_action">
+                            @Html.AntiForgeryToken()
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SanPham.TenSP, "Tên sản phẩm", new { @class = "col-md-3 control-label" })
+                                        <div class="col-md-9">
+                                            @Html.EditorFor(model => model.SanPham.TenSP, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.SanPham.TenSP)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SanPham.GiaGoc, "Giá gốc", new { @class = "col-md-3 control-label" })
+                                        <div class="col-md-9">
+                                            @Html.EditorFor(model => model.SanPham.GiaGoc, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.SanPham.GiaGoc)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SanPham.UuDai, "Ưu đãi", new { @class = "col-md-3 control-label" })
+                                        <div class="col-md-9">
+                                            @Html.EditorFor(model => model.SanPham.UuDai, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.SanPham.UuDai)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group">
+                                    Loại danh mục
+                                    <div class="col-md-10">
+                                        @Html.DropDownListFor(model => model.SanPham.MaDanhMuc, ViewBag.MaDanhMuc as SelectList, "Chọn danh mục", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.SanPham.MaDanhMuc)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    nhà sản xuất
+                                    <div class="col-md-10">
+                                        @Html.DropDownListFor(model => model.SanPham.MaHang, ViewBag.MaHang as SelectList, "Chọn hãng", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.SanPham.MaHang)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SanPham.MoTa, "Mô tả sản phẩm", new { @class = "col-md-2 control-label" })
+                                        <div class="col-md-10">
+                                            <textarea name="SanPham.MoTa" id="SanPham_MoTa" class="form-control"></textarea>
+                                            @Html.ValidationMessageFor(model => model.SanPham.MoTa)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SanPham.ThongSoKyThuat, "Thông số kỹ thuật", new { @class = "col-md-2 control-label" })
+                                        <div class="col-md-10">
+                                            <textarea name="SanPham.ThongSoKyThuat" id="SanPham_ThongSoKyThuat" class="form-control"></textarea>
+                                            @Html.ValidationMessageFor(model => model.SanPham.ThongSoKyThuat)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                            </div>
+
+                            <div class="form-group">
+                                <a>Hình ảnh chính</a>
+                                <input type="file" name="filec" multiple />
+
+
+                            </div>
+                            <div class="form-group">
+                                <a>Hình ảnh phụ 1</a>
+                                <input type="file" name="filepu1" multiple />
+
+                            </div>
+                            <div class="form-group">
+                                <a>Hình ảnh phụ 2</a>
+                                <input type="file" name="filepu2" multiple />
+
+                            </div>
+                            <div class="form-group">
+                                <a>Hình ảnh phụ 3</a>
+                                <input type="file" name="filepu3" multiple />
+
+
+                                <div>
+                                    @Html.EditorFor(model => model.HinhAnh.LinkHinhAnhChinh, new { @class = "col-md-2 control-label", @type = "hidden", Value = "chinh" })
+                                    @Html.EditorFor(model => model.HinhAnh.LinkHinhAnhPhu1, new { @class = "col-md-2 control-label", @type = "hidden", Value = "phu1" })
+                                    @Html.EditorFor(model => model.HinhAnh.LinkHinhAnhPhu2, new { @class = "col-md-2 control-label", @type = "hidden", Value = "phu2" })
+                                    @Html.EditorFor(model => model.HinhAnh.LinkHinhAnhPhu3, new { @class = "col-md-2 control-label", @type = "hidden", Value = "phu3" })
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        Chính sách bảo hành
+                                        <div class="col-md-10">
+                                            <select class="form-control" id="ChinhSachBaoHanh" name="SanPham.ChinhSachBaoHanh">
+                                                <option value="Bảo hành nếu có lỗi từ nhà sản xuất">Bảo hành nếu có lỗi từ nhà sản xuất</option>
+                                                <option value="Bảo hành linh kiện">Bảo hành linh kiện</option>
+                                                <option value="Bảo hành điện tử">Bảo hành điện tử</option>
+                                            </select>
+                                            @Html.ValidationMessageFor(model => model.SanPham.ChinhSachBaoHanh)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SanPham.ThoiGianBaoHanh, "Số tháng bảo hành", new { @class = "col-md-3 control-label" })
+                                        <div class="col-md-9">
+                                            @Html.EditorFor(model => model.SanPham.ThoiGianBaoHanh, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.SanPham.ThoiGianBaoHanh)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.SanPham.SoLuongTon, "Số lượng sản phẩm", new { @class = "col-md-3 control-label" })
+                                        <div class="col-md-9">
+                                            @Html.EditorFor(model => model.SanPham.SoLuongTon, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.SanPham.SoLuongTon)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="color:orangered">
+                                @Html.ValidationSummary()
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <button type="submit" class="btn btn-outline-primary btn-fw mdi mdi-database-plus">Create</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        @Html.Action("RenderIndex", "SanPhamAdmin")
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('SanPham_MoTa');
+</script>
+<script>
+    CKEDITOR.replace('SanPham_ThongSoKyThuat');
+</script>

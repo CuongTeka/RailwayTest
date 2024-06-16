@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.ThongKeNam_Result>
+@{
+    Layout = null;
+}
+
+<table class="table">
+    <tr>
+        <th>Số lượng hóa đơn bán ra năm này</th>
+        <th>Tổng tiền bán được</th>
+        <th>Số lượng sản phẩm bán được</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SLHDNam</td>
+            <td style="color:orangered">@String.Format("{0:0,0}", item.TienNam) đ</td>
+            <td>@item.SLSP</td>
+
+        </tr>
+    }
+</table>

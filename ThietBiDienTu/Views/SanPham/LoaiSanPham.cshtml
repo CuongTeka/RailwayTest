@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.HangSanXuat>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<div class="aside">
+  
+    <div class="checkbox-filter">
+        @foreach (var loai in Model)
+        {
+
+            <div class="input-checkbox">
+                @Html.ActionLink(loai.TenHang, "SanPhamTheoLoai", "SanPham", new { @maloai = loai.MaHang }, null)
+
+            </div>
+        }
+
+    </div>
+</div>
+
+

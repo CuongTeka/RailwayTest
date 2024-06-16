@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetOrderInfoByStatus1_Result>
+@{
+    Layout = null;
+}
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Mã đơn</th>
+                <th> Tên sản phẩm</th>
+                <th> Khách hàng </th>
+
+                <th> Ngày đặt </th>
+                <th> Đơn vị vận chuyển </th>
+                <th> Chức năng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var groupedOrders = Model.GroupBy(item => item.MaDDH).ToList();
+            }
+
+            @foreach (var group in groupedOrders)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => group.Key)
+                    </td>
+                    <td>
+                        @foreach (var item in group)
+                        {
+                            <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.LinkHinhAnhChinh)" class="me-2" alt="image"> @Html.DisplayFor(modelItem => item.TenSP)<br />
+                        }
+                    </td>
+                    <td> @Html.DisplayFor(modelItem => group.First().TenNguoiNhan)</td>
+
+                    <td> @Html.DisplayFor(modelItem => group.First().NgayDat) </td>
+                    <td> @Html.DisplayFor(modelItem => group.First().TenNVC)</td>
+                    <td>
+                        <a href="@Url.Action("XacNhanDaGiao", new { id = group.First().MaDDH})" class="btn btn-outline-dark btn-fw mdi mdi-pencil-box">
+                            Xác nhận
+                        </a>
+                        <a href="@Url.Action("XemChiTietDH", new { idDDH = group.First().MaDDH })" class="btn btn-outline-success btn-fw btn-fw mdi mdi-eye">
+                            Xem đơn
+                        </a>
+
+                    </td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "BaoHanh";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+
+    <div class="container mt-5">
+        <ul class="nav nav-tabs" id="myTabs">
+            <li class="nav-item">
+                <a class="nav-link active" id="tab1" data-toggle="tab" href="#content1">Phiếu được bảo hành</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab2" data-toggle="tab" href="#content2">Phiếu bị từ chối</a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#content3">Phiếu đang chờ xác nhận     <i class="mdi mdi-new-box"></i> @ViewBag.ChoBH</a>
+
+            </li>
+            
+
+        </ul>
+
+        <div class="tab-content mt-2">
+            <div id="content1" class="tab-pane fade show active">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Các phiếu được bảo hành</h4>
+                        @Html.Action("HTChapNhanBH", "BaoHanh")
+                    </div>
+                </div>
+            </div>
+            <div id="content2" class="tab-pane fade">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Các phiếu đã từ chối</h4>
+                        @Html.Action("HTKhongChapNhanBH", "BaoHanh")
+                    </div>
+                </div>
+            </div>
+            <div id="content3" class="tab-pane fade">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Phiếu bảo hành chờ xác nhận</h4>
+                        @Html.Action("YeuCauBH", "BaoHanh")
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+

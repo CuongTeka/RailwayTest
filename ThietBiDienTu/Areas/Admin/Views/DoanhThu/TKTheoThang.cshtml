@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.ThongKeHoaDonTheoThang_Result>
+@{
+    ViewBag.Title = "TKTheoThang";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+
+    <div class="container mt-5">
+        <h2>Thống kê theo tháng</h2>
+
+        @using (Html.BeginForm("TKTheoThang", "DoanhThu", FormMethod.Get))
+        {
+            <div class="form-group">
+                @Html.Label("Tháng:")
+                @Html.DropDownList("Thang", Enumerable.Range(1, 12).Select(x => new SelectListItem
+        {
+        Value = x.ToString(),
+        Text = x.ToString(),
+        Selected = x == ViewBag.SelectedMonth
+        }), new { @class = "form-control" })
+
+                @Html.Label("Năm:")
+                @Html.DropDownList("Nam", Enumerable.Range(DateTime.Now.Year - 5, 10).Select(x => new SelectListItem
+        {
+        Value = x.ToString(),
+        Text = x.ToString(),
+        Selected = x == ViewBag.SelectedYear
+        }), new { @class = "form-control" })
+
+                <button type="submit" class="btn btn-primary">Thực hiện</button>
+            </div>
+        }
+
+        @if (Model != null && Model.Any())
+        {
+            <table class="table">
+                <tr>
+                    <th>Mã hóa đơn</th>
+                    <th>Thanh toán</th>
+                    <th>Tên khách hàng</th>
+                    <th>Mã giảm giá</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.MaDDH</td>
+                        <td style="color:orangered">@String.Format("{0:0,0}", item.ThanhTien) đ</td>
+                        <td>@item.TenKH</td>
+                        <td>@item.MaGiamGia</td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p>Không có dữ liệu thống kê cho tháng và năm đã chọn.</p>
+        }
+</div>
+</div>

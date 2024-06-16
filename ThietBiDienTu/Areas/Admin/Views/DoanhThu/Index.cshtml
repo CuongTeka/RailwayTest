@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@Html.Action("TKBaThang")
+
+<div class="card-body">
+
+    <h4 class="card-title text-white">Todo</h4>
+
+
+    @{
+        DateTime ngay = DateTime.Now;
+        var currentDate = DateTime.Now;
+
+        var currentMonth = currentDate.Month;
+        var currentYear = currentDate.Year;
+
+    }
+
+    @Html.ActionLink("Doanh Thu Theo Tháng", "TKTheoThang", new { Thang = currentMonth, Nam = currentYear }, new { @class = "btn btn-outline-primary btn-fw mdi mdi-calendar-multiple-check" })
+
+    <br />
+    <br />
+    @Html.ActionLink("Doanh Thu Theo Ngày", "TKTheoNgay", new { ngay = DateTime.Now.ToString("MM-dd-yyyy") }, new { @class = "btn btn-outline-success btn-fw mdi mdi-calendar-today" })
+    <br /><br />
+
+    @Html.ActionLink("Doanh Thu Theo Khoảng", "TKTheoKhoan", new { ngaybd = DateTime.Now.ToString("MM-dd-yyyy"), ngaykt = DateTime.Now.ToString("MM-dd-yyyy") }, new { @class = "btn btn-outline-info btn-fw mdi mdi-calendar" })
+
+    @Html.Action("TKTuanBanRa")
+    @Html.Action("TKBanRa")
+    @Html.Action("TKNamBanRa")
+
+
+</div>
+
+

@@ -1,0 +1,97 @@
+﻿
+@model ThietBiDienTu.Areas.Admin.Models.sp_HienThiBaoHanhTheoMaBH_Result
+
+@{
+    ViewBag.Title = "XemChiTietBaoHanh";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>XemChiTietBaoHanh</h2>
+
+    <div>
+        <h4>BaoHanh</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TenSP)
+                @Html.DisplayNameFor(model => model.LinkHinhAnhChinh)
+            </dt>
+
+            @Html.DisplayFor(model => model.TenSP)
+
+            @Html.DisplayFor(model => model.LinkHinhAnhChinh)
+
+                    @Html.DisplayFor(model => model.NgayDH)
+
+                    @Html.DisplayFor(model=>model.ThoiGianBaoHanh)
+
+                    @Html.DisplayFor(model => model.ChinhSachBaoHanh)
+
+                    @Html.DisplayFor(model => model.TenKH)
+
+                    @Html.DisplayFor(model => model.SDT)
+
+                    @Html.DisplayFor(model=> model.TrangThai)
+
+    </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Yêu cầu bảo hành", "TaoYeuCau", new { MaBH = Model.MaBH }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <br />
+            <h2 class="text-center">Xem Chi Tiết Bảo Hành</h2> <hr />
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="~/Assets/img/@Model.LinkHinhAnhChinh" alt="Product Image" class="img-fluid rounded" style="max-width: 350px;">
+                </div>
+                <div class="col-md-8">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Tên Sản Phẩm</th>
+                                <td>@Html.DisplayFor(model => model.TenSP)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ngày Đặt Hàng</th>
+                                <td>@Html.DisplayFor(model => model.NgayDH)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Thời Gian Bảo Hành</th>
+                                <td>@Html.DisplayFor(model => model.ThoiGianBaoHanh)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Chính Sách Bảo Hành</th>
+                                <td>@Html.DisplayFor(model => model.ChinhSachBaoHanh)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tên Khách Hàng</th>
+                                <td>@Html.DisplayFor(model => model.TenKH)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Số Điện Thoại</th>
+                                <td>@Html.DisplayFor(model => model.SDT)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Trạng Thái</th>
+                                <td>@Html.DisplayFor(model => model.TrangThai)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer ">
+            <div class="col-md-4 text-center">
+                @Html.ActionLink("Yêu cầu bảo hành", "TaoYeuCau", new { MaBH = Model.MaBH }, new { @class = "btn btn-success", style = "background-color: #007bff; border-color: #28a745;" })<hr />
+                @*@Html.ActionLink("Quay về", "Index", new { @class = "btn btn-primary ", style = " background-color: #6c757d; border-color: #6c757d;" })<hr />*@
+            </div>
+        </div>
+    </div>
+</div>

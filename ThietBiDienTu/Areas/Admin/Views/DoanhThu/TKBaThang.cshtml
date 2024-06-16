@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+<style>
+    #lineChart {
+        width: 100%; /* Đặt chiều rộng 100% của thẻ cha */
+        max-width: 600px; /* Đặt chiều rộng tối đa */
+        height: auto; /* Tự động điều chỉnh chiều cao */
+    }
+</style>
+<canvas id="lineChart"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Dữ liệu mẫu cho biểu đồ
+    var data = {
+        labels: ["Tháng @ViewBag.tTT", "Tháng @ViewBag.tT", "Tháng @ViewBag.tHT"],
+        datasets: [{
+            label: "Doanh thu ba tháng gần đây",
+            borderColor: "#007BFF",
+            data: [@ViewBag.tkTTruocTruoc, @ViewBag.tkThangTruoc, @ViewBag.tkTHienTai]
+
+            
+
+        }]
+    };
+
+    // Lấy thẻ canvas
+    var ctx = document.getElementById('lineChart').getContext('2d');
+
+    // Tạo biểu đồ đường
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>

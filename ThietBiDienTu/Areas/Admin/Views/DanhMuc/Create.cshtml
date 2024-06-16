@@ -1,0 +1,40 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.DanhMuc
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <div class="form-group">
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Thêm danh mục mới</h4>
+        </div>
+
+        <div class="card-body">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TenDanhMuc, "Tên danh mục", new { @class = "aria-label" })
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.TenDanhMuc, new { @class = "form-control", placeholder = "Nhập tên danh mục", required = "required" })
+                        @Html.ValidationMessageFor(model => model.TenDanhMuc)
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-outline-primary btn-fw mdi mdi-database-plus">Thêm danh mục</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

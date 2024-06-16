@@ -1,0 +1,128 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.KhachHang
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .menu-container {
+        background-color: #ddd;
+        padding: 10px;
+        height: 100vh;
+    }
+
+    .list-group-item a {
+        padding: 20px;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .form-container {
+        background-color: #fff;
+        padding: 20px;
+        height: 100vh;
+    }
+</style>
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 menu-container">
+                <!-- Menu section -->
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="@Url.Action("Create", "TKKhachHang", new { })">Thông tin của tôi</a></li>
+                    <li class="list-group-item"><a href="@Url.Action("Index", "DiaChiKH", new { })">Địa chỉ</a></li>
+                    <li class="list-group-item"><a href="@Url.Action("Index", "DDHKH", new { })">Đơn mua</a></li>
+                    <li class="list-group-item"><a href="@Url.Action("DSMaGG", "TKKhachHang", new { })">Danh sách mgg đã lưu</a></li>
+                    <li class="list-group-item"> <a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-8 form-container">
+                <h4>Hồ sơ của tôi</h4>
+                <hr />
+                @Html.ValidationSummary(true)
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.TenKH,new { @class = "control-label col-md-6" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TenKH)
+                            @Html.ValidationMessageFor(model => model.TenKH)
+                        </div>
+                    </div>*@
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AnhKH, "Chọn ảnh", new { @class = "control-label col-md-2 custom-label" })
+                    <div class="col-md-12">
+                        <div id="image-preview" class="mt-2">
+                            <img id="selected-image" src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png" alt="Preview" style="max-width:20%" />
+                        </div>
+
+                        <input type="file" id="AnhKH" name="AnhKH" class="form-control" accept=".jpeg, .jpg, .png" onchange="previewImage(this)" />
+                        @Html.ValidationMessageFor(model => model.AnhKH, "", new { @class = "validation-message" })
+
+
+                        <p>Dụng lượng file tối đa 1 MB</p>
+                        <p>Định dạng: .JPEG, .JPG, .PNG</p>
+                        <hr />
+                    </div>
+                </div>
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.AnhKH, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.AnhKH)
+                            @Html.ValidationMessageFor(model => model.AnhKH)
+                        </div>
+                    </div>*@
+
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.TenTKKH, "Tên tài khoản", new { @class = "control-label col-md-2 custom-label" })
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(model => model.TenTKKH, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TenTKKH, "", new { @class = "validation-message" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MKTKKH, "Mật khẩu", new { @class = "control-label col-md-2 custom-label" })
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(model => model.TenTKKH, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MKTKKH)
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SoDienThoaiKH, "Số điện thoại", new { @class = "control-label col-md-2 custom-label" })
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(model => model.SoDienThoaiKH, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.SoDienThoaiKH)
+                    </div>
+                </div>
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.MaQuyen, "MaQuyen", new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("MaQuyen", String.Empty)
+                            @Html.ValidationMessageFor(model => model.MaQuyen)
+                        </div>
+                    </div>*@
+
+                <div class="form-group">
+
+                    <div class="col-md-offset-2 col-md-10">
+                        <br />
+                        <input type="submit" value="Lưu" class="btn btn-primary btn-lg text-center" style="background-color: green; color: white;" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}

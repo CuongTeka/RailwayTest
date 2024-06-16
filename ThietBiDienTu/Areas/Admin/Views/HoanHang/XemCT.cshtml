@@ -1,0 +1,52 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.GetOrderInfoByMaHoanHang_Result
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <p>
+
+        @Html.ActionLink("Quay lại", "HoanHang", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </p>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Xem chi tiết sản phẩm</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: #FFB6C1; ">
+                            <h5 class="card-title mb-0">Thông tin hoàn hàng</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-md-6">Lý do hoàn hàng:</label>
+                                <div class="col-md-6">
+                                    <p class="form-control-static font-weight-bold">    @Html.DisplayFor(model => model.LyDonHoanHang)</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-md-6">Trạng thái:</label>
+                                <div class="col-md-6">
+                                    <p class="form-control-static">@Html.DisplayFor(model => model.TrangThaiHoanHang)</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-md-6">Tên người yêu cầu:</label>
+                                <div class="col-md-6">
+                                    <p class="form-control-static">@Html.DisplayFor(model => model.TenNguoiNhan)</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

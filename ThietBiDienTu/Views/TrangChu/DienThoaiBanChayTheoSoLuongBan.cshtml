@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.SanPham>
+@{
+    Layout = null;
+}
+
+<div class="aside">
+
+    @foreach (var item in Model)
+    {
+        <div class="product-widget">
+            <a href="@Url.Action("ChiTietSanPham", "SanPham", new { id = item.MaSP })" class="product-link">
+                <div class="product-img">
+                    <img src="~/Assets/img/@Html.DisplayFor(modelItem => item.HinhAnh.LinkHinhAnhChinh)" alt="">
+                </div>
+                <div class="product-body">
+                    <p class="product-category">@Html.DisplayFor(modelItem => item.DanhMuc.TenDanhMuc)</p>
+                    <h3 class="product-name"><a href="#">@Html.DisplayFor(modelItem => item.TenSP)</a></h3>
+                    <h4 class="product-price">@String.Format("{0:0,0}", item.GiaTien) đ  <del class="product-old-price">@String.Format("{0:0,0}", item.GiaGoc) đ</del></h4>
+                </div>
+                </a>
+        </div>
+    }
+
+
+</div>

@@ -1,0 +1,72 @@
+﻿@model ThietBiDienTu.Areas.Admin.Models.NhanVien
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="form-group">
+        @Html.ActionLink("Quay về", "Index", null, new { @class = "btn btn-outline-primary btn-fw mdi mdi-backburger" })
+    </div>
+    <div class="card">
+        <div class=" card-header" style="background-color: #C8E2B1; ">
+        </div>
+      
+        <div class="card-body">
+            <h4 class="card-title">Xem chi tiết nhân sự</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: #FFB6C1; ">
+                            <h5 class="card-title mb-0">Thông tin nhân sự</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-md-6">Tên tài khoản:</label>
+                                <div class="col-md-6">
+                                    <p class="form-control-static font-weight-bold">@Html.DisplayFor(model => model.TenTaiKhoanAdmin)</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-md-6">Mật khẩu:</label>
+                                <div class="col-md-6">
+                                    <p class="form-control-static">@Html.DisplayFor(model => model.MatKhauAdmin)</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-md-6">Họ tên:</label>
+                                <div class="col-md-6">
+                                    <p class="form-control-static">@Html.DisplayFor(model => model.HoTenAdmin)</p>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-md-6">Tên quyền:</label>
+                                <div class="col-md-6">
+                                    <p class="form-control-static">@Html.DisplayFor(model => model.Quyen.TenQuyen)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="@Html.DisplayFor(model => model.AnhAdmin)" class="card-img-top rounded" alt="Hình ảnh chính">
+
+                        </div>
+                    </div>
+
+                </div>
+
+            <div>
+                <p>
+                    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaAdmin }, new { @class = "btn btn-outline-dark btn-fw mdi mdi-pencil-box" })
+
+                </p>
+            </div>
+               
+        </div>
+    </div>     
+</div>  

@@ -1,0 +1,117 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetOrderInfoByCustomerIdAndOrderIDAndStatus_Result>
+@{
+    Layout = null;
+}
+
+@*@foreach (var item in Model)
+    {
+        @Html.DisplayFor(model => item.TenSP)
+    }*@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ChiTietDonDaHuy</title>
+    <style>
+
+        .product-image {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+
+        .btn-back {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+            .btn-back:hover {
+                background-color: #0056b3;
+            }
+
+        .product-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Chi Tiết Đơn Hàng Đã Hủy</h2>
+        <a href="Index" class="btn-back">Quay Lại</a>
+        <hr />
+        <table>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th>Tên Sản Phẩm</th>
+                        <td>
+                            
+                                <div class="product-container">
+                                    <img src="~/Assets/img/@item.LinkHinhAnhChinh" alt="@item.TenSP" class="product-image" />
+                                    <div>@Html.DisplayFor(modelItem => item.TenSP)</div>
+                                </div>
+                                
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Số Lượng</th>
+                        <td>@Html.DisplayFor(modelItem => item.SoLuong)</td>
+                    </tr>
+                    <tr>
+                        <th>Đơn Giá</th>
+                        <td>@String.Format("{0:0,0}", item.GiaTien) đ</td>
+                    </tr>
+                    <tr>
+                        <th>Thành Tiền</th>
+                        <td>@String.Format("{0:0,0}", item.ThanhTien) đ</td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

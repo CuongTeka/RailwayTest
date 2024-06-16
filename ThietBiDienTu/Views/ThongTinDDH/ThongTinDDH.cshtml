@@ -1,0 +1,168 @@
+﻿@model IEnumerable<ThietBiDienTu.Areas.Admin.Models.GetCustomerAddress_Result>
+@{
+    ViewBag.Title = "ThongTinDDH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        {
+            <div class="container">
+                <h1 class="mb-3"><b>Xác nhận thông tin giao hàng</b></h1><br />
+                <div class="row">
+                    @Html.Action("SPGioHang", "GioHang")
+                    <div class="col l-4 m-12 s-12">
+
+
+                        <div class="main__pay-title">Ghi chú</div>
+                        <input id="desp" name="desp" type="text" class="form-control" placeholder="Ghi chú:">
+
+
+
+                        <div class="main__pay-title">Mã giảm giá</div>
+                        @Html.DropDownList("MaGiamGia", ViewBag.MGGList as SelectList,"Chọn mã giảm giá", new { @class = "form-control" })
+
+
+
+
+                        <div class="main__pay-title">Chọn đơn vị vận chuyển</div>
+                        
+                        @Html.DropDownList("MaNVC", ViewBag.NVCList as SelectList, new { @class = "form-control" })
+
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col l-8 m-12 s-12">
+                        <div class="main__pay-title">Thông tin người nhận</div>
+                        <select id="selectAddress" style="width: 500px; height:50px;" onchange="updateAddressFields()">
+                            <option>Vui lòng chọn thông tin giao hàng</option>
+                            @foreach (var item in Model)
+                            {
+
+
+                                <option value="@Json.Encode(new { MacDinh = item.MacDinh, TenNguoiNhan = item.TenNguoiNhan, SDTNguoiNhan = item.SDTNguoiNhan, SoNha = item.SoNha, TenDuong = item.TenDuong, PhuongXa = item.PhuongXa, QuanHuyen = item.QuanHuyen, TinhThanh = item.TinhThanh })">
+                                    @if (item.MacDinh == 1)
+                                    {<text>[Mặc định]</text>} @item.TenNguoiNhan, @item.SDTNguoiNhan, @item.SoNha, @item.TenDuong, @item.PhuongXa, @item.QuanHuyen, @item.TinhThanh
+                                </option>
+                            }
+
+
+                        </select>
+                        @Html.ActionLink("+ Thêm mới địa chỉ", "ThemMoiDiaChi", null, null)
+                        <div class="row form-group">
+                            <!-- Họ đệm -->
+                            <!-- Tên -->
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Tên người nhận</label>
+                                <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Tên" required>
+                                @*<div class="invalid-feedback">Vui lòng nhập tên khách hàng</div>*@
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+
+                                <input id="sdt" name="sdt" type="text" class="form-control" placeholder="Nhập số điện thoại người nhận" required>
+                                @*<div class="invalid-feedback">Vui lòng nhập số điện thoại</div>*@
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phuong" class="form-label">Phường, xã</label>
+                            <input id="phuong" name="phuong" type="text" class="form-control" placeholder="Nhập địa chỉ phường xã" required>
+                            @*<div class="invalid-feedback ">Vui lòng nhập họ đệm</div>*@
+                        </div>
+                        <div class="col-md-6">
+                            <label for="quanhuyen" class="form-label">Quận, huyện</label>
+                            <input id="quanhuyen" name="quanhuyen" type="text" class="form-control" placeholder="Nhập địa chỉ quận, huyện"required>
+                            @*<div class="invalid-feedback ">Vui lòng nhập họ đệm</div>*@
+                        </div>
+                        <div class="col-md-6">
+                            <label for="tinhthanh" class="form-label">Tỉnh, thành phố</label>
+                            <input id="tinhthanh" name="tinhthanh" type="text" class="form-control" placeholder="Nhập địa chỉ tỉnh, thành phố"required>
+                            @*<div class="invalid-feedback ">Vui lòng nhập họ đệm</div>*@
+                        </div>
+
+                        <div class="row form-group">
+                            <!-- Country -->
+                            <!-- đường -->
+                            <div class="col-md-6">
+                                <label for="duong" class="form-label">Tên đường</label>
+                                <input id="duong" name="duong" type="text" class="form-control" placeholder="Nhập tên đường"required>
+                                @*<div class="invalid-feedback ">Vui lòng nhập tên đường </div>*@
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="sonha" class="form-label">Số nhà</label>
+                                <input id="sonha" name="sonha" type="text" class="form-control" placeholder="Nhập số nhà"required>
+                                @*<div class="invalid-feedback ">Vui lòng nhập số nhà </div>*@
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col l-4 m-12 s-12">
+                        <div class="main__pay">
+                            <div class="main__pay-title">Tổng số lượng</div>
+                            <div class="pay-info">
+                                <div class="main__pay-text">
+                                    Tổng phụ
+                                </div>
+                                <div class="main__pay-price">
+                                    @String.Format("{0:0,0}",@ViewBag.GiaGio) ₫
+                                </div>
+                            </div>
+                            
+
+                            <div class="row form-group">
+                                <div class="col-md-12 py-2">
+                                    <button class="btn btn--default orange" type="submit">Thanh Toán</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+    function updateAddressFields() {
+        var selectElement = document.getElementById("selectAddress");
+        var selectedValue = selectElement.value;
+
+        // Parse the JSON string into an object
+        var values = JSON.parse(selectedValue);
+
+        // Assign values to the corresponding input fields
+        document.getElementById("lastName").value = values.TenNguoiNhan;
+        document.getElementById("sdt").value = values.SDTNguoiNhan;
+        document.getElementById("sonha").value = values.SoNha;
+        document.getElementById("duong").value = values.TenDuong;
+        document.getElementById("phuong").value = values.PhuongXa;
+        document.getElementById("quanhuyen").value = values.QuanHuyen;
+        document.getElementById("tinhthanh").value = values.TinhThanh;
+    }
+</script>
+
+
+<script>
+    
+
+</script>
+<script src="~/Assets/User/js/main.js"></script>
+<script src="~/Assets/User/js/bootstrap.js"></script>
+<!--Giỏ hàng-->
+<link rel="stylesheet" type="text/css" href="~/Assets/User/css/cart.css">
+<link rel="stylesheet" type="text/css" href="~/Assets/User/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="~/Assets/User/css/pay.css">
+@*<link rel="stylesheet" type="text/css" href="~/Assets/User/css/library.css">*@
